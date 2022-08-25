@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/app_top_main_layout">
+
+    <include layout="@layout/layout_header_common" />
+
+    <LinearLayout style="@style/app_main_view_layout">
+
+        <TextView
+            android:id="@+id/tvCardDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:textAppearance="@style/CustomTextAppearance.Light"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_small" />
+
+        <!--<com.vinaygaba.creditcardview.CreditCardView-->
+        <!--android:id="@+id/ccvPaymentCard"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:layout_margin="20dp"-->
+        <!--app:cardName="Vinay Gaba"-->
+        <!--app:cardNameTextColor="#cccccc"-->
+        <!--app:cardNumber="4242"-->
+        <!--app:cardNumberFormat="masked_all_but_last_four"-->
+        <!--app:cardNumberTextColor="#cccccc"-->
+        <!--app:expiryDate="02/22"-->
+        <!--app:expiryDateTextColor="#cccccc"-->
+        <!--app:hintTextColor="#cccccc"-->
+        <!--app:isEditable="false"-->
+        <!--app:putChip="true"-->
+        <!--app:type="auto"-->
+        <!--app:validTillTextColor="#cccccc" />-->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_margin="20dp"
+            android:background="@color/app_card_view_bg"
+            android:backgroundTint="@color/app_card_view_bg"
+            app:cardCornerRadius="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/ivCardType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_icon_card" />
+
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="@dimen/text_size_extra_large" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvValidThru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/CustomTextAppearance.Regular"
+                        android:textColor="@color/secondary_text_color"
+                        android:textSize="@dimen/text_size_tiny" />
+
+                    <TextView
+                        android:id="@+id/tvType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textAppearance="@style/CustomTextAppearance.Regular"
+                        android:textColor="@color/secondary_text_color"
+                        android:textSize="@dimen/text_size_tiny" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvExpiryDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/CustomTextAppearance.Regular"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:id="@+id/tvCardType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textAppearance="@style/CustomTextAppearance.Regular"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_size_small" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.tookancustomer.utility.CustomTextView
+            android:id="@+id/tvDeleteCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textAppearance="@style/CustomTextAppearance.Light"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/text_size_large"
+            app:drawableStartCompat="@drawable/ic_icon_delete_card" />
+    </LinearLayout>
+</RelativeLayout>

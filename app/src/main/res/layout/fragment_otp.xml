@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_top_main_layout">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_15dp"
+            android:layout_marginEnd="@dimen/padding_right_left"
+            android:layout_marginStart="@dimen/padding_right_left"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvVerifyMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:letterSpacing="0.05"
+                android:textColor="@color/heading_text_color_onboard"
+                android:textSize="@dimen/text_size_xxl" />
+
+            <TextView
+                android:id="@+id/tvOTPMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.04"
+                android:textColor="@color/sub_text_color_onboard"
+                android:textSize="@dimen/text_size_normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_right_left"
+                android:layout_marginTop="20dp"
+                android:layoutDirection="ltr"
+                android:textDirection="ltr"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.tookancustomer.plugin.MaterialEditText
+                    android:id="@+id/etOTP1"
+                    style="@style/otp_et_style"
+                    android:layout_marginEnd="5dp"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/etOTP2" />
+
+
+                <com.tookancustomer.plugin.MaterialEditText
+                    android:id="@+id/etOTP2"
+                    style="@style/otp_et_style"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/etOTP3" />
+
+
+                <com.tookancustomer.plugin.MaterialEditText
+                    android:id="@+id/etOTP3"
+                    style="@style/otp_et_style"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/etOTP4" />
+
+
+                <com.tookancustomer.plugin.MaterialEditText
+                    android:id="@+id/etOTP4"
+                    style="@style/otp_et_style"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/etOTP5" />
+
+                <com.tookancustomer.plugin.MaterialEditText
+                    android:id="@+id/etOTP5"
+                    style="@style/otp_et_style"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@+id/etOTP6" />
+
+                <com.tookancustomer.plugin.MaterialEditText
+                    android:id="@+id/etOTP6"
+                    style="@style/otp_et_style"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:imeOptions="actionDone"
+                    android:nextFocusDown="@+id/etOTP6" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlDoneOTP"
+                style="@style/rectangle_button_style"
+                android:layout_margin="0dp">
+
+                <TextView
+                    android:id="@+id/tvVerify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="8dp"
+                    android:textColor="@color/btn_text_color"
+                    android:textSize="@dimen/text_size_large" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvChangeNumber"
+                    style="@style/textview_clickable_primary"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:letterSpacing="0.05"
+                    android:padding="@dimen/_10dp" />
+
+                <TextView
+                    android:id="@+id/tvResendOTP"
+                    style="@style/textview_clickable_primary"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:letterSpacing="0.05"
+                    android:padding="@dimen/_10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

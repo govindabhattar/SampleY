@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg">
+
+    <include layout="@layout/layout_header_common" />
+
+    <com.tookancustomer.plugin.MaterialEditText
+        android:id="@+id/etGiftCard"
+        style="@style/edittext_style"
+        android:layout_below="@+id/rlActionBar"
+        android:layout_margin="15dp"
+        app:met_floatingLabel="normal"
+        app:met_hideUnderline="false" />
+
+    <TextView
+        android:id="@+id/btnRedeemGiftCard"
+        style="@style/rectangle_button_style"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

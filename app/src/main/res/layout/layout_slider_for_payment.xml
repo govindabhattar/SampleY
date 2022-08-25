@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlSliderContainer"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@color/colorAccent"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/viewAlpha"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:background="@color/slider_green" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutSlider"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/capsule_slider_color_bg">
+
+            <TextView
+                android:id="@+id/tvSlide"
+                android:layout_width="93dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/capsule_white_color"
+                android:gravity="center"
+                android:textAppearance="@style/CustomTextAppearance.MavenMedium"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_small" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sliderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:textAppearance="@style/CustomTextAppearance.MavenMedium"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_small" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlHoldPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/_10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvHoldPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/white"
+            tools:text="Amount will be hold from you." />
+
+
+        <Button
+            android:id="@+id/btnAcceptHold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tvHoldPayment"
+            android:layout_marginTop="@dimen/_10dp"
+            android:background="@null"
+            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+            android:textColor="@color/white"
+            tools:text="OK,Got it" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

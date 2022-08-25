@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llAddPointsView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <com.tookancustomer.utility.CustomTextView
+        android:id="@+id/tvPointsHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:gravity="center|start"
+        android:singleLine="true"
+        android:textAlignment="viewStart"
+        android:textAllCaps="true"
+        android:textAppearance="@style/CustomTextAppearance.Regular"
+        android:textColor="@color/colorReferCode"
+        android:textSize="@dimen/text_size_medium" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="3dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_15dp">
+
+
+
+            <TextView
+                android:id="@+id/tvAvailableValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_15dp"
+                android:textColor="@color/black"
+                android:layout_gravity="end"
+                android:text="@string/available_text"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvCurrencySymbolPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/etPointsManual"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_white_round_corners_edittext"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_medium15" />
+
+                <TextView
+                    android:id="@+id/tvApplyPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/app_button_background_slightly_rounded"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:paddingStart="@dimen/_10dp"
+                    android:paddingEnd="@dimen/_10dp"
+                    android:singleLine="true"
+                    android:textAppearance="@style/CustomTextAppearance.SemiBold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_medium"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvMaxPointsValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sp"
+                android:textColor="@color/black_40"
+                android:text="@string/maximum_text"/>
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

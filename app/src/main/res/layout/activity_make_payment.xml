@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_top_main_layout">
+
+    <include layout="@layout/layout_header_common" />
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/app_main_view_layout"
+        android:layout_above="@+id/layoutSlider"
+        android:background="@color/grey_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <include layout="@layout/layout_bill_breakdowns" />
+
+            <include layout="@layout/layout_loyalty_points" />
+
+            <include layout="@layout/layout_tip_yelo" />
+
+            <include layout="@layout/layout_promos" />
+
+            <include layout="@layout/layout_makepayment_payment" />
+
+            <TextView
+                android:id="@+id/editOrderNoteTV"
+                android:visibility="gone"
+                android:padding="@dimen/_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tvAmountPrice"
+        style="@style/rectangle_button_style_full"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+
+    <include
+        android:id="@+id/layoutSlider"
+        layout="@layout/layout_slider_for_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rlSliderContainer"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="57dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:background="@color/colorAccent"-->
+    <!--android:visibility="visible">-->
+
+    <!--<View-->
+    <!--android:id="@+id/viewAlpha"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:alpha="0"-->
+    <!--android:background="@color/slider_green" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/relativeLayoutSlider"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="36dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:background="@drawable/capsule_slider_color_bg">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvSlide"-->
+    <!--android:layout_width="93dp"-->
+    <!--android:layout_height="36dp"-->
+    <!--android:background="@drawable/capsule_white_color"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:textAllCaps="true"-->
+    <!--android:textAppearance="@style/CustomTextAppearance.MavenMedium"-->
+    <!--android:textColor="@color/text_color"-->
+    <!--android:textSize="@dimen/text_size_small" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/sliderText"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="50dp"-->
+    <!--android:textAppearance="@style/CustomTextAppearance.MavenMedium"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="@dimen/text_size_small" />-->
+
+    <!--</RelativeLayout>-->
+</RelativeLayout>

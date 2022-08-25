@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/tools"
+    style="@style/app_top_main_layout">
+
+    <include layout="@layout/layout_header_search" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlBottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <include layout="@layout/layout_button_checkout"/>
+
+        </RelativeLayout>
+
+        <include layout="@layout/layout_no_product_found"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cornered_bg_upper_views"
+            android:elevation="2dp"
+            android:minHeight="50dp"
+            android:visibility="gone"
+            app:tabTextAppearance="@style/storefront_TabWidget"
+            app:tabTextColor="@color/primary_text_color"
+            map:tabSelectedTextColor="@color/colorAccent" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rlBottomLayout"
+            android:layout_below="@+id/tabLayout"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

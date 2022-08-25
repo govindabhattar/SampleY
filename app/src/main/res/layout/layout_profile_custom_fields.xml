@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llAdditionalInfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/seperator_color" />
+
+    <RelativeLayout
+        android:id="@+id/rlProfileCustomFieldsHeader"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/lightest_grey"
+        android:paddingStart="@dimen/_10dp"
+        android:paddingEnd="@dimen/_10dp">
+
+        <com.tookancustomer.utility.CustomTextView
+            android:id="@+id/tvAdditionalInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+            android:textColor="@color/popup_heading_color"
+            android:textSize="@dimen/text_size_normal" />
+
+        <ImageView
+            android:id="@+id/ibArrowCustomFields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:rotation="90"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_arrow_black" />
+
+        <TextView
+            android:id="@+id/tvProfileCustomFieldsUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/app_button_background_slightly_rounded"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:paddingEnd="@dimen/_10dp"
+            android:paddingStart="@dimen/_10dp"
+            android:singleLine="true"
+
+            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/_1dp"-->
+        <!--android:background="@color/seperator_color" />-->
+
+    <LinearLayout
+        android:id="@+id/llProfileCustomFieldsChild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/seperator_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@drawable/shadow_gradient" />
+
+        <!--Custom Field starts here-->
+        <LinearLayout
+            android:id="@+id/llCustomFields"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRequiredCustomField"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:orientation="vertical"
+            android:showDividers="none">
+
+        </LinearLayout>
+        <!--CustomField ends here-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/_1dp"-->
+            <!--android:background="@color/seperator_color" />-->
+    </LinearLayout>
+
+</LinearLayout>

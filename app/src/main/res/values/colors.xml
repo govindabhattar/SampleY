@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="action_bar_color">#0000</color>
+
+    <color name="colorPrimary">#2296FF</color>
+    <color name="colorPrimaryDark">#2296FF</color>
+    <color name="colorAccent">#2296FF</color>
+    <color name="colorAccent_05">#0D2296FF</color>
+    <color name="hippoColorPrimaryDark">#2296FF</color>
+
+
+    <color name="app_main_bg_color0">#fff</color>
+    <color name="app_main_bg_color">#fff</color>
+    <color name="app_upper_views_color">#ffffff</color>
+    <color name="app_card_view_bg">#ffffff</color>
+    <color name="cart_text_bg">#402296FF</color>
+
+
+    <color name="side_menu_text_color">#fff</color>
+
+    <color name="btn_normal_bg_color">#2296FF</color>
+    <color name="btn_pressed_bg_color">#c62296FF</color>
+    <color name="btn_text_color">#ffffff</color>
+
+    <color name="popup_bg_color">#ffffff</color>
+    <color name="popup_heading_color">#99474747</color>
+    <color name="popup_message_color">#474747</color>
+    <color name="popup_btn_bg_color">#ffffff</color>
+    <color name="popup_btn_bg_pressed_color">#b2b2b2</color>
+    <color name="popup_btn_positive_color">#ffffff</color>
+    <color name="popup_btn_negative_color">#2296FF</color>
+
+    <color name="et_hint_color">#b2b2b2</color>
+    <color name="et_text_color">#474747</color>
+    <color name="edit_text_line_color_light">#d9d9d9</color>
+
+    <!--com.tookancustomer.modules.recurring text color-->
+    <color name="dark_hint">#393939</color>
+    <color name="gray_">#D7D7D7</color>
+
+
+    <color name="clickable_tv_pressed_color">#474747</color>
+    <color name="clickable_tv_normal_color">#2296FF</color>
+
+    <color name="heading_text_color_onboard">#909090</color>
+    <color name="sub_text_color_onboard">#999999</color>
+
+    <!--<color name="primary_text_color">#333333</color>-->
+    <color name="text_color_dark">#494958</color>
+    <!--<color name="text_color_light">#A4A4A4</color>-->
+    <color name="text_color_light_less">#9d9da3</color>
+
+    <color name="primary_text_color">#595968</color>
+    <color name="primary_text_color_60">#99595968</color>
+    <color name="primary_pressed_text_color">#99474747</color>
+    <color name="secondary_text_color">#929292</color>
+    <color name="tertiary_text_color">#2296FF</color>
+
+    <color name="fb_btn_color_normal">#3b5998</color>
+    <color name="fb_btn_color_pressed">#4E69A2</color>
+
+    <color name="google_btn_color_pressed">#DE5341</color>
+
+    <color name="snackbar_bg_color_failure">#e6e2574c</color>
+    <color name="snackbar_bg_color_success">#e666d02a</color>
+
+
+    <color name="colorPath">#2296FF</color>
+    <color name="colorDividerLine">#ebebeb</color>
+
+
+    <!--Status Codes-->
+    <color name="status_unassigned">#cacaca</color>
+    <color name="status_declined">#cb3529</color>
+    <color name="status_assigned">#f5a946</color>
+    <color name="status_accepted">#ba68c8</color>
+    <color name="status_started">#4695f5</color>
+    <color name="status_successful">#66d02a</color>
+    <color name="status_refund">#228b22</color>
+    <color name="status_failed">#e2574c</color>
+    <color name="status_partial_laundry">#ee771c</color>
+    <color name="status_onhold_laundry">#ee771c</color>
+    <color name="status_in_progress">#166bd3</color>
+    <color name="status_job_assigned">#FF007F</color>
+    <color name="status_processed">#29c4cb</color>
+    <color name="status_picked_up">#FFA500</color>
+    <color name="status_food_ready">#FFA500</color>
+
+
+    <!--<color name="rating_low">#FB9758</color>-->
+    <color name="rating_low">#e2574c</color>
+    <color name="rating_medium">#FFD365</color>
+    <color name="rating_high">#8DCF61</color>
+
+    <color name="box_color">#cacaca</color>
+    <color name="dotted_color">#9d9d9d</color>
+
+
+    <color name="transparent">#0000</color>
+    <color name="black">#000000</color>
+    <color name="black_filter">#3c3c3c</color>
+    <color name="black_05">#0D000000</color>
+    <color name="black_10">#33000000</color>
+    <color name="black_20">#44000000</color>
+    <color name="black_30">#4D000000</color>
+    <color name="black_40">#5F000000</color>
+    <color name="black_80">#bb000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="white_100">#FFF</color>
+    <color name="black_100">#000</color>
+    <color name="colorRed">#e2574c</color>
+    <color name="seperator_color">#e5e5e5</color>
+    <color name="translucent_white">#8FFF</color>
+    <color name="light_grey">#dbdbdb</color>
+    <color name="lighter_grey">#f4f4f4</color>
+    <color name="lightest_grey">#f6f6f6</color>
+    <color name="grey_bg">#F7F7F7</color>
+    <color name="medium_grey">#acaba9</color>
+    <color name="nine_grey">#999999</color>
+    <color name="dark_grey">#404a56</color>
+
+    <color name="colorHint">#b2b2b2</color>
+    <color name="colorLabel">#929292</color>
+    <color name="colorReferText">#262626</color>
+    <color name="colorReferHowItWorksText">#1e7fff</color>
+    <color name="colorReferCode">#333333</color>
+    <color name="colorBillBreakDowns">#858585</color>
+
+    <color name="colorWhatsApp">#25d366</color>
+    <color name="colorTwitter">#1da1f2</color>
+    <color name="colorMore">#2296FF</color>
+    <color name="colorShareon">#305c5c5c</color>
+    <color name="colorTip">#5c5c5c</color>
+
+    <color name="blackOpacityFive">#05000000</color>
+
+    <color name="promo_pplied">#82c548</color>
+    <color name="black_50">#80000000</color>
+    <color name="text_color_light">#595968</color>
+    <color name="text_color_lighter">#A4A4A4</color>
+    <color name="theme_color">#FD7945</color>
+
+    <color name="text_color">#595968</color>
+    <color name="line_color">#c8c8c8</color>
+    <color name="stroke_light_grey_alpha">#33979797</color>
+    <color name="storefront_task_details_label_color">#a4a4a4</color>
+
+    <color name="offer_popup_item_color">#F5F5F5</color>
+
+    <!--Calender color-->
+    <!-- General -->
+    <!--<color name="selected_date_circle_color">#54B948</color>-->
+
+    <!-- Fonts -->
+    <color name="title_color">#000</color>
+    <color name="week_color">#000</color>
+
+    <!-- Calendar Date -->
+    <color name="default_date_color">#3b4144</color>
+    <color name="disable_date_color">#BDBDBD</color>
+    <color name="range_date_color">@color/default_date_color</color>
+    <color name="selected_date_color">#FFF</color>
+    <color name="range_bg_color">#B7C99D</color>
+    <color name="calendar_text">#474747</color>
+
+    <color name="calendar_header">@color/white_80</color>
+    <color name="calendar_header_title">#FFF</color>
+    <color name="selected_date_circle_color">#FF5252</color>
+    <color name="range_color">#FFCDD2</color>
+
+    <!-- Calendar New Date -->
+    <color name="calendar_bg">#ffffff</color>
+    <color name="calendar_divider">#f5f5f5</color>
+    <color name="color_red">#ef5350</color>
+    <color name="dateTimeRangePickerStateDefault">@android:color/black</color>
+    <color name="dateTimeRangePickerStateNonSelectable">@android:color/white</color>
+    <!--<color name="dateTimeRangePickerStateToday">#ffcf40</color>-->
+    <color name="dateTimeRangePickerStateToday">@android:color/black</color>
+    <color name="dateTimeRangePickerHeaderTextColor">@android:color/black</color>
+    <color name="dateTimeRangePickerRangeTextColorInactive">#B9B9B9</color>
+    <color name="custom_header_text">#030303</color>
+    <color name="colorStrikeLine">#ea4444</color>
+
+    <color name="textcolor_closed">#f00</color>
+    <color name="textcolor_preorder">#F39C12</color>
+    <color name="textcolor_open">#3C963C</color>
+
+    <color name="bgColorFilterRecycler">#F3F4F6</color>
+    <color name="lineColorFilterRecycler">@color/light_grey</color>
+    <color name="bgTransparentFilterPage">#10000000</color>
+
+    <color name="slider_green">#5ecd93</color>
+    <color name="subtext_billbreakdown">#5FBC81</color>
+    <!--<color name="transparent">#7F000000</color>-->
+
+    <color name="color_veg">#149646</color>
+
+    <!--Calender-->
+    <color name="calendar_lines">#B2B2B2</color>
+
+    <color name="hyperlink">#337ab7</color>
+
+    <!--For hippo use-->
+    <color name="start_color">#2296FF</color>
+    <color name="center_color">#2296FF</color>
+    <color name="end_color">#2296FF</color>
+    <color name="color_order_id">#67686a</color>
+    <color name="color_order_status">#5c5d5f</color>
+
+
+</resources>

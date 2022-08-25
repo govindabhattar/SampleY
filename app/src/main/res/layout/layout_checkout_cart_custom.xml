@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvAdditionalPriceParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="3dp"
+    android:visibility="gone"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/rlAdditionalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tvAdditionalHeading"
+            style="@style/CustomTextAppearance.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_normal" />
+
+
+        <TextView
+            android:id="@+id/tvAdditionalAmount"
+            style="@style/CustomTextAppearance.SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:gravity="end"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_normal" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

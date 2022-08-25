@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_header_common_new" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlBottomLayout"
+        android:layout_below="@+id/rlActionBar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMerchantCloseText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nine_grey"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlPreorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDividerLine"
+            android:paddingStart="@dimen/_10dp"
+            android:paddingTop="@dimen/_5dp"
+            android:paddingEnd="@dimen/_10dp"
+            android:paddingBottom="@dimen/_5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvPreorderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/CustomTextAppearance.SemiBold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_small"
+                android:visibility="gone"
+                tools:text="Preorder"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvPreorderDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textAppearance="@style/CustomTextAppearance.SemiBold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_small"
+                android:visibility="gone"
+                tools:text="Preorder"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+        <com.tookancustomer.utility.CustomTextView
+            android:id="@+id/tvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lighter_grey"
+            android:drawablePadding="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/text_color"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_other_address_copy" />
+
+        <LinearLayout
+            android:id="@+id/llfilterView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/light_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            app:srcCompat="@drawable/icon_calender" />
+
+                        <com.tookancustomer.plugin.MaterialEditText
+                            android:id="@+id/etFilterDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawablePadding="@dimen/_10dp"
+                            android:focusable="false"
+                            android:gravity="center"
+                            android:textAppearance="@style/CustomTextAppearance.Avenir"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_small"
+                            app:met_floatingLabelTextColor="@color/colorAccent"
+                            app:met_hideUnderline="true"
+                            app:met_textColorHint="@color/primary_text_color" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="?actionBarSize"
+                    android:background="@color/light_grey" />
+
+                <LinearLayout
+                    android:id="@+id/llFilter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_5dp">
+
+                    <com.tookancustomer.utility.CustomTextView
+                        android:id="@+id/tvFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/_10dp"
+                        android:gravity="center"
+                        android:textAppearance="@style/CustomTextAppearance.Regular"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_size_small"
+                        app:drawableStartCompat="@drawable/icon_filter" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/light_grey" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMerchantDynamicPages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivLeftArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_grey"
+                android:padding="8dp"
+                android:rotation="180"
+                app:srcCompat="@drawable/ic_arrow_black" />
+
+            <ImageView
+                android:id="@+id/ivRightArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_grey"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_arrow_black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMerchantDynamicPages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/ivRightArrow"
+                android:layout_toEndOf="@+id/ivLeftArrow" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rvMerchantDynamicPages"
+                android:background="@color/light_grey" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llVegSwitchLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvVegOnlyLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/CustomTextAppearance.Regular"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_small" />
+
+            <Switch
+                android:id="@+id/switchVegFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:theme="@style/vegSwitch" />
+        </LinearLayout>
+
+        <include layout="@layout/layout_shimmer_animation" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMerchantCategoriesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cornered_bg_upper_views"
+            android:elevation="2dp"
+            android:minHeight="50dp"
+            android:visibility="gone"
+            app:tabGravity="center"
+
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextAppearance="@style/storefront_TabWidget"
+            app:tabTextColor="@color/primary_text_color" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llNoProductAvailableLoc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvNoProductFoundLoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textAppearance="@style/CustomTextAppearance.Regular"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_extra_large" />
+
+            <Button
+                android:id="@+id/btnGoToLocationActivity"
+                style="@style/rounded_button_style"
+                android:layout_margin="28dp"
+                android:textAppearance="@style/CustomTextAppearance.SemiBold"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/text_size_large"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlCustomOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10dp"
+        android:visibility="gone"
+
+        android:layout_above="@+id/rlBottomLayout"
+        android:layout_alignParentEnd="true">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_custom_order"
+            android:padding="@dimen/_6dp">
+
+
+            <ImageView
+                android:id="@+id/ivCustomOrder"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_custom_order"
+                app:srcCompat="@drawable/ic_chat_custom_order" />
+
+
+            <TextView
+                android:id="@+id/tvCustomOrderButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/ivCustomOrder"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="@string/custom_order"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/layout_button_checkout" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

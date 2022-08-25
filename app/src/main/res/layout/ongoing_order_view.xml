@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_53dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/tracking_image_iv"
+        android:layout_width="@dimen/_35dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_6dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/_7dp"
+        android:elevation="@dimen/_8dp" />
+
+    <LinearLayout
+        android:id="@+id/detailLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_6dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:layout_marginBottom="9dp"
+        android:layout_toRightOf="@+id/ll"
+        android:layout_toEndOf="@+id/tracking_image_iv"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/storeNameTV"
+            style="@style/CustomTextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+
+            android:textSize="@dimen/text_size_small"
+            tools:text="Your order has been accepted by the restaurant." />
+
+        <TextView
+            android:id="@+id/taskStatusTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/et_text_color"
+            android:textSize="@dimen/text_size_small"
+            tools:text="Your order has been accepted by the restaurant." />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="end">
+
+        <ImageView
+            android:id="@+id/trackIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            app:srcCompat="@drawable/ic_icon_pin_location" />
+
+        <ImageView
+            android:id="@+id/chatIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_6dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            app:srcCompat="@drawable/ic_chat_active" />
+    </LinearLayout>
+
+    <!--<TextView-->
+    <!--android:id="@+id/taskActionTV"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:background="@drawable/selector_grey"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingStart="@dimen/_10dp"-->
+    <!--android:paddingEnd="@dimen/_10dp"-->
+    <!--android:textColor="@color/colorAccent"-->
+    <!--android:textSize="@dimen/text_size_medium" />-->
+</RelativeLayout>
+

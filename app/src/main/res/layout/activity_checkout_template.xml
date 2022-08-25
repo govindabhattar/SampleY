@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.tookancustomer.checkoutTemplate.CheckoutTemplateActivity">
+
+
+    <include
+        android:id="@+id/llHeader"
+        layout="@layout/layout_header_common" />
+
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnSubmit"
+        android:layout_below="@+id/llHeader">
+
+        <LinearLayout
+            android:id="@+id/llCustomFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_15dp">
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        style="@style/rectangle_button_style_full"
+        android:layout_alignParentBottom="true" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_placeHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llHeader"
+        android:padding="@dimen/_15dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_data_found_backend_message"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>

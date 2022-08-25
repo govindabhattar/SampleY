@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10dp"
+    android:background="@drawable/bg_white_round_corners_edittext"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/CustomTextAppearance.Bold"
+        android:textColor="@color/primary_text_color"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:textSize="@dimen/text_size_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5dp"
+        android:paddingStart="@dimen/_5dp"
+        android:paddingEnd="@dimen/_5dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/status_text"
+            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5dp"
+        android:paddingStart="@dimen/_5dp"
+        android:paddingEnd="@dimen/_5dp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/stay_time"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/tvStayTimeValue"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5dp"
+        android:paddingStart="@dimen/_5dp"
+        android:paddingEnd="@dimen/_5dp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/cost"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/tvRevenueValue"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5dp"
+        android:paddingStart="@dimen/_5dp"
+        android:paddingEnd="@dimen/_5dp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/name_with_colon"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/tvGuestValue"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@color/seperator_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/btnReject"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/reject"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent" />
+
+            <View
+                android:layout_width="@dimen/_1dp"
+                android:layout_height="match_parent"
+                android:background="@color/seperator_color" />
+
+            <TextView
+                android:id="@+id/btnAccept"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/accept"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

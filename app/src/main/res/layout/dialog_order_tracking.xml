@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/llHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dimen_12dp">
+
+        <TextView
+            android:id="@+id/tvorderId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:text="@string/order_id"
+            android:textAppearance="@style/CustomTextAppearance.Bold"
+            android:textColor="#040201"
+            android:textSize="@dimen/text_size_normal" />
+
+        <ImageView
+            android:id="@+id/ivCloseDialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            app:srcCompat="@drawable/ic_baseline_close_24" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.9dp"
+        android:layout_below="@+id/llHeader"
+        android:background="@color/black_40" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/milestones_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/view"
+        android:padding="@dimen/dimen_12dp"
+        tools:listitem="@layout/item_milestone" />
+</RelativeLayout>

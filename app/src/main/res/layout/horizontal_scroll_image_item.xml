@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/app_main_bg_color">
+
+    <RelativeLayout
+        android:id="@+id/rlSnapshot"
+        android:layout_width="wrap_content"
+        android:paddingEnd="@dimen/_6dp"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgSnapshot"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop" />
+
+        <ProgressBar
+            android:id="@+id/pbProgressBar"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivDeleteItem"
+        android:layout_width="@dimen/_15dp"
+        android:layout_height="@dimen/_15dp"
+        android:layout_alignEnd="@+id/rlSnapshot"
+        android:background="@drawable/ic_failure"
+        android:padding="3dp" />
+
+</RelativeLayout>
+

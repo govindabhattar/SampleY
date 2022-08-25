@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- dateTitleLayout -->
+    <dimen name="dateTitlePaddingBottom">5dp</dimen>
+    <!-- weekLayout -->
+    <!-- weekRowLayout -->
+    <dimen name="weekRowMinHeight">36dp</dimen>
+    <dimen name="dayOfMonthBoxSize">40dp</dimen>
+    <dimen name="dayOfMonthSize">30dp</dimen>
+    <dimen name="dayOfMonthMinWidth">40dp</dimen>
+    <dimen name="dayOfMonthMinHeight">0dp</dimen>
+    <dimen name="dayOfMonthPaddingBottom">0dp</dimen>
+
+    <dimen name="strip_height">20dp</dimen>
+
+
+</resources>

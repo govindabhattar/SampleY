@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_main_bg_color">
+
+    <fragment
+        android:id="@+id/map"
+        class="com.tookancustomer.mapfiles.TouchableMapFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <include layout="@layout/layout_header_common" />
+
+    <com.tookancustomer.utility.CustomTextView
+        android:id="@+id/tvAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlActionBar"
+        android:background="@color/lighter_grey"
+        android:drawablePadding="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textAppearance="@style/CustomTextAppearance.Regular"
+        android:textColor="@color/text_color"
+        app:drawableStartCompat="@drawable/ic_other_address_copy" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlMyLocation"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvAddress"
+        android:layout_margin="@dimen/_10dp"
+        android:background="@drawable/white_oval"
+        android:elevation="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_icon_current_location" />
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvItemList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/llNoStoresAvailable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNoStorefrontFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_medium" />
+
+    </LinearLayout>
+
+</RelativeLayout>

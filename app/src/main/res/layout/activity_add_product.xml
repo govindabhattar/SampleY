@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_header_common" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnAddProduct"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:layout_below="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_name" />
+
+                <EditText
+                    android:id="@+id/etProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:hint="@string/enter_product_name" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description_text" />
+
+                <EditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:hint="@string/enter_description_text" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_type_text" />
+
+                <Spinner
+                    android:id="@+id/spPriceType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/price_type_text"
+                    android:hint="@string/enter_price_type_text" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llUnits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unit_text" />
+
+                <EditText
+                    android:id="@+id/etUnit"
+                    android:layout_width="match_parent"
+                    android:textSize="@dimen/_14sp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_unit" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_text" />
+
+                <EditText
+                    android:id="@+id/etPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="14sp"
+                    android:hint="@string/enter_price_text" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/schedule_date"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/etStartDate"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:layout_weight="1"
+                        android:hint="@string/start_date"/>
+                    <TextView
+                        android:id="@+id/etEndDate"
+                        android:layout_width="@dimen/_0dp"
+                        android:focusableInTouchMode="false"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/end_date"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+                <com.tookancustomer.plugin.MaterialEditText
+                    android:id="@+id/etFilterDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:visibility="gone"
+                    android:hint="@string/schedule_date"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:drawableStart="@drawable/icon_calender"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    app:met_floatingLabelTextColor="@color/colorAccent"
+                    app:met_hideUnderline="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_images_text" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    >
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvImages"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="60dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivAttach"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_toRightOf="@+id/rvImages"
+
+                        android:src="@drawable/icon_add_image" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/select_template"/>
+
+            <Spinner
+                android:id="@+id/spSelectTemplate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/llCustomFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:orientation="vertical"
+                android:showDividers="middle">
+                <!--CustomField ends here-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        style="@style/rectangle_button_style"
+        android:id="@+id/btnAddProduct"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/_20sp"
+        android:layout_marginStart="@dimen/_20sp"
+        android:text="@string/add_product_text" />
+
+</RelativeLayout>

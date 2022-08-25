@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_marginEnd="30dp"
+    android:layout_marginStart="30dp"
+    android:padding="@dimen/_10dp"
+    android:background="@drawable/popup_cornered_border"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10dp"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.95"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sp"
+            android:text="@string/reward_conditions"/>
+
+
+        <TextView
+            android:id="@+id/tvClose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/close"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="end"
+            android:gravity="end"
+            />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:visibility="gone"
+        android:background="@color/black_80"
+        android:layout_margin="@dimen/_5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCondition1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_10dp"/>
+        <TextView
+            android:id="@+id/tvCondition7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_10dp"/>
+        <TextView
+            android:id="@+id/tvCondition2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:layout_margin="@dimen/_10dp"/>
+
+        <TextView
+
+            android:id="@+id/tvCondition6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_10dp"/>
+
+        <TextView
+            android:id="@+id/tvCondition5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_10dp"/>
+
+        <TextView
+            android:id="@+id/tvCondition3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_10dp"/>
+        <TextView
+            android:id="@+id/tvCondition4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

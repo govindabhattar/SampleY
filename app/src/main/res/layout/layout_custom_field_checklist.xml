@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_20dp"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/vwTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvLabel"
+        style="@style/CustomTextAppearance.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#707070"
+        android:textSize="@dimen/text_size_extra_large"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginBottom="@dimen/_5dp"
+        tools:text="Label" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCheckList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/vwBottom"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:background="@color/white" />
+</LinearLayout>

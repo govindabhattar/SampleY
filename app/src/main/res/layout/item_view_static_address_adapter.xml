@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_10dp">
+
+    <TextView
+        android:id="@+id/tvAddressName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/CustomTextAppearance.Regular"
+        android:textColor="@color/black"
+        android:text="Address Name" />
+
+    <TextView
+        android:id="@+id/tvFullAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Address Full Address" />
+
+</LinearLayout>

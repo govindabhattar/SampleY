@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/agentImageRL"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/agentImageIV"
+                android:layout_width="@dimen/_70dp"
+                android:layout_height="@dimen/_70dp"
+                app:srcCompat="@drawable/ic_profile_placeholder" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_toEndOf="@+id/agentImageRL"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/agentNameTV"
+                style="@style/task_details_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal"
+                tools:text="Agent Name" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/contactlabelTV"
+                    style="@style/task_details_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <TextView
+                    style="@style/task_details_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="  :  "
+                    android:textSize="@dimen/text_size_medium" />
+
+
+                <TextView
+                    android:id="@+id/contact_numberTV"
+                    style="@style/task_details_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_medium"
+                    tools:text="1478523695" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/emailLabelTV"
+                    style="@style/task_details_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <TextView
+                    style="@style/task_details_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="  :  "
+                    android:textSize="@dimen/text_size_medium" />
+
+                <TextView
+                    android:id="@+id/emailTV"
+                    style="@style/task_details_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_medium"
+                    tools:text="something@something.com" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ratingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_star_small"
+                android:drawablePadding="@dimen/_5dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                tools:text="3.0" />
+
+            <TextView
+                android:id="@+id/viewMoreTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/view_more"
+                android:padding="@dimen/_5dp"
+                android:textColor="@color/hyperlink"
+                android:textSize="@dimen/text_size_medium"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,234 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_main_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/action_bar_color">
+
+            <RelativeLayout
+                android:id="@+id/rlBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_selector_transparent_grey"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    android:rotationY="@integer/locale_mirror_flip"
+                    app:srcCompat="@drawable/ic_back" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/padding_right_left"
+                android:paddingEnd="@dimen/padding_right_left">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvContinueAsGuestHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginStart="10dp"
+
+                        android:letterSpacing="0.05"
+                        android:text="@string/text_continue_guest_login_user"
+                        android:textAppearance="@style/CustomTextAppearance.Bold"
+                        android:textColor="@color/nine_grey"
+                        android:textSize="@dimen/_18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+
+                            android:gravity="center">
+
+                            <View
+                                android:id="@+id/vErrorIcon"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="20dp"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/ic_icon_verified"
+                                tools:visibility="visible" />
+
+
+                            <com.tookancustomer.plugin.MaterialEditText
+                                android:id="@+id/email"
+                                style="@style/edittext_style"
+                                android:imeOptions="actionNext"
+                                android:inputType="textEmailAddress|textNoSuggestions"
+                                android:textAppearance="@style/CustomTextAppearance.Regular"
+                                android:textSize="@dimen/text_size_normal"
+                                app:met_underlineColor="@color/edit_text_line_color_light" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <View
+                            android:id="@+id/vContactErrorIcon"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_icon_verified" />
+
+
+                        <ImageView
+                            android:id="@+id/contactIV"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true" />
+
+
+                        <LinearLayout
+                            android:id="@+id/rlCountryCode"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/contactIV"
+                            android:background="@drawable/selector_grey"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:orientation="horizontal"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp">
+
+                            <TextView
+                                android:id="@+id/tvCountryCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+
+                                android:textAppearance="@style/CustomTextAppearance.Regular"
+                                android:textColor="@color/gray_"
+                                android:textSize="@dimen/text_size_medium" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:includeFontPadding="false"
+                                app:srcCompat="@drawable/ic_icon_country_code_arrow" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/_60dp"
+                            android:layout_height="1.3dp"
+                            android:layout_below="@+id/contact"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="-7dp"
+                            android:layout_toEndOf="@+id/contactIV"
+                            android:background="@color/edit_text_line_color_light" />
+
+                        <com.tookancustomer.plugin.MaterialEditText
+                            android:id="@+id/contact"
+                            style="@style/edittext_style"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/rlCountryCode"
+
+                            android:digits="0123456789"
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:maxLength="15"
+                            android:paddingStart="5dp"
+                            android:textSize="@dimen/text_size_medium"
+                            app:met_underlineColor="@color/edit_text_line_color_light" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/guest_login_button"
+                            style="@style/rectangle_button_style"
+
+                            android:layout_margin="0dp">
+
+                            <TextView
+                                android:id="@+id/tvContinueAsGuest"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:textAppearance="@style/CustomTextAppearance.Light"
+                                android:textColor="@color/btn_text_color"
+                                android:textSize="@dimen/text_size_large" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dp" />
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

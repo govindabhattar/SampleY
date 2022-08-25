@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headingLayoutLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:weightSum="4">
+
+
+    <TextView
+        android:id="@+id/dayTV"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_5dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/timeTV"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_5dp"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/amountChargeTV"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_5dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/occurrenceTV"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_5dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/amountTV"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_5dp"
+        android:textColor="@color/black"
+        android:visibility="visible" />
+
+
+</LinearLayout>
+

@@ -1,0 +1,284 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_main_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/action_bar_color">
+
+            <RelativeLayout
+                android:id="@+id/rlBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_selector_transparent_grey"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    android:rotationY="@integer/locale_mirror_flip"
+                    app:srcCompat="@drawable/ic_back" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/padding_right_left"
+                android:paddingEnd="@dimen/padding_right_left"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSigninHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:letterSpacing="0.05"
+                        android:textAppearance="@style/CustomTextAppearance.Light"
+                        android:textColor="@color/heading_text_color_onboard"
+                        android:textSize="@dimen/text_size_xxl" />
+
+                    <TextView
+                        android:id="@+id/tvSigninSubHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:letterSpacing="0.05"
+                        android:textAppearance="@style/CustomTextAppearance.Light"
+                        android:textColor="@color/secondary_text_color"
+                        android:textSize="@dimen/text_size_medium" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <View
+                            android:id="@+id/vErrorIcon"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="20dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_icon_verified" />
+
+
+                        <com.tookancustomer.plugin.MaterialEditText
+                            android:id="@+id/email"
+                            style="@style/edittext_style"
+                            android:layout_centerInParent="true"
+                            android:layout_toEndOf="@+id/llCountryCode"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress|textNoSuggestions"
+                            android:textAppearance="@style/CustomTextAppearance.Light"
+                            android:textSize="@dimen/text_size_large"
+                            app:met_underlineColor="@color/edit_text_line_color_light" />
+
+                        <LinearLayout
+                            android:id="@+id/llCountryCode"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="5dp"
+                            android:background="@drawable/selector_grey"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:orientation="horizontal"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tvCountryCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:textAppearance="@style/CustomTextAppearance.UltraLight"
+                                android:textColor="@color/et_text_color"
+                                android:textSize="@dimen/text_size_large" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:includeFontPadding="false"
+                                app:srcCompat="@drawable/ic_icon_country_code_arrow" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20dp">
+
+
+                        <View
+                            android:id="@+id/vPasswordErrorIcon"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_icon_verified" />
+
+                        <com.tookancustomer.plugin.MaterialEditText
+                            android:id="@+id/password"
+                            style="@style/edittext_style"
+                            android:imeActionId="@+id/login"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:longClickable="false"
+                            android:maxLength="25"
+                            android:textAppearance="@style/CustomTextAppearance.Light"
+                            android:textSize="@dimen/text_size_large"
+                            app:met_underlineColor="@color/edit_text_line_color_light" />
+
+                        <ImageButton
+                            android:id="@+id/ibViewPassword"
+                            android:layout_width="@dimen/password_eye_width"
+                            android:layout_height="@dimen/password_eye_height"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="4dp"
+                            android:background="@color/transparent"
+                            android:padding="15dp"
+                            app:srcCompat="@drawable/ic_eye_inactive" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvForgotPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="8dp"
+                        android:letterSpacing="0.05"
+                        android:padding="3dp"
+                        android:textAppearance="@style/CustomTextAppearance.Regular"
+                        android:textColor="@drawable/text_selector_main_color_pressed"
+                        android:textSize="@dimen/text_size_normal"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/email_sign_in_button"
+                        style="@style/rectangle_button_style"
+                        android:layout_margin="0dp">
+
+                        <TextView
+                            android:id="@+id/tvSignIn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:textAppearance="@style/CustomTextAppearance.Light"
+                            android:textColor="@color/btn_text_color"
+                            android:textSize="@dimen/text_size_large" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSignupLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvNewUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="0.04"
+                            android:textAppearance="@style/CustomTextAppearance.Light"
+                            android:textColor="@color/sub_text_color_onboard"
+                            android:textSize="@dimen/text_size_normal" />
+
+                        <TextView
+                            android:id="@+id/signUpTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:letterSpacing="0.04"
+                            android:padding="5dp"
+                            android:textAppearance="@style/CustomTextAppearance.Regular"
+                            android:textColor="@color/tertiary_text_color"
+                            android:textSize="@dimen/text_size_normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/guest_login_button"
+                            style="@style/rectangle_button_style"
+                            android:layout_margin="0dp">
+
+                            <TextView
+                                android:id="@+id/tvGuestLogin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:textAppearance="@style/CustomTextAppearance.Light"
+                                android:textColor="@color/btn_text_color"
+                                android:textSize="@dimen/text_size_large" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

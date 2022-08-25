@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_top_main_layout">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlSliderContainer"
+        android:background="@color/grey_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSignupFeeHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="@dimen/padding_right_left"
+                android:layout_marginStart="@dimen/padding_right_left"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:letterSpacing="0.05"
+                android:textAppearance="@style/CustomTextAppearance.Regular"
+                android:textColor="@color/heading_text_color_onboard"
+                android:textSize="@dimen/text_size_xxl" />
+
+            <TextView
+                android:id="@+id/tvSignupFeeMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="@dimen/padding_right_left"
+                android:layout_marginStart="@dimen/padding_right_left"
+                android:letterSpacing="0.04"
+                android:textAppearance="@style/CustomTextAppearance.Regular"
+                android:textColor="@color/sub_text_color_onboard"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/tvSignupFeeAmount"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/accent_oval"
+                android:gravity="center"
+                android:textAppearance="@style/CustomTextAppearance.Regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/tvSignupFeeErrorMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/padding_right_left"
+                android:layout_marginStart="@dimen/padding_right_left"
+                android:letterSpacing="0.04"
+                android:textAppearance="@style/CustomTextAppearance.Regular"
+                android:textColor="@color/sub_text_color_onboard"
+                android:textSize="@dimen/text_size_normal" />
+
+            <include layout="@layout/layout_makepayment_payment" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlSliderContainer"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/viewAlpha"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:background="@color/slider_green" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutSlider"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/capsule_slider_color_bg">
+
+            <TextView
+                android:id="@+id/tvSlide"
+                android:layout_width="93dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/capsule_white_color"
+                android:gravity="center"
+                android:textAppearance="@style/CustomTextAppearance.MavenMedium"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_small" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sliderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:textAppearance="@style/CustomTextAppearance.MavenMedium"
+            android:textColor="#fff"
+            android:textSize="@dimen/text_size_small" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

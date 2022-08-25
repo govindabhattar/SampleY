@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                style="@style/app_top_main_layout"
+                android:animateLayoutChanges="true">
+
+    <include layout="@layout/layout_header_common"/>
+
+    <RelativeLayout
+        style="@style/app_main_view_layout"
+        android:paddingTop="0dp">
+
+        <ScrollView
+            android:id="@+id/swScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnProfile"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="102dp"
+                            android:layout_height="102dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="25dp"
+                            android:id="@+id/rlAvtar"
+                            android:layout_marginBottom="25dp"
+                            android:gravity="center">
+
+                            <!--<ImageView-->
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ivAvtar"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/ic_profile_placeholder"/>
+
+
+
+                            <RelativeLayout
+                                android:id="@+id/rlEditImage"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/accent_oval"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    app:srcCompat="@drawable/ic_camera"/>
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/progressBarAvtar"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerInParent="true"
+                                android:duplicateParentState="true"
+                                android:visibility="gone"/>
+                        </RelativeLayout>
+
+                        <com.tookancustomer.utility.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:id="@+id/tvCustomerRating"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/rlAvtar"
+                            android:visibility="gone"
+                            app:drawableEndCompat="@drawable/ic_star_yellow_10"
+                            tools:text="4.69"/>
+
+                        <ImageView
+                            android:id="@+id/ibProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:padding="10dp"
+                            app:srcCompat="@drawable/ic_icon_edit_row"/>
+                    </RelativeLayout>
+
+                    <com.tookancustomer.plugin.MaterialEditText
+                        android:id="@+id/etName"
+                        style="@style/met_edit_profile"
+                        android:imeOptions="actionNext"
+                        android:inputType="textNoSuggestions|textCapWords|textPersonName"
+                        android:maxLength="50"
+                        android:nextFocusDown="@+id/etPhone"/>
+
+                    <HorizontalScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="-5dp"
+                        android:fillViewport="true"
+                        android:scrollbars="none">
+
+                        <com.tookancustomer.plugin.MaterialEditText
+                            android:id="@+id/etEmail"
+                            style="@style/met_edit_profile"
+                            android:ellipsize="end"
+                            android:singleLine="true"/>
+                    </HorizontalScrollView>
+                    <!--android:inputType="textMultiLine"-->
+                    <!--android:maxLines="5"-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="@dimen/_12sp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvPhoneHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="-3dp"
+                            android:textAppearance="@style/CustomTextAppearance.Regular"
+                            android:textColor="@color/et_hint_color"
+                            android:textSize="@dimen/text_size_small"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.tookancustomer.plugin.MaterialEditText
+                                android:id="@+id/etCountryCode"
+                                style="@style/met_edit_profile"
+                                android:layout_width="wrap_content"
+                                android:drawablePadding="3dp"
+                                android:focusable="false"
+                                android:padding="3dp"
+                                android:paddingEnd="2dp"
+                                app:met_floatingLabel="none"/>
+                            <!--android:drawableEnd="@drawable/ic_icon_country_code_arrow"-->
+
+                            <com.tookancustomer.plugin.MaterialEditText
+                                android:id="@+id/etPhone"
+                                style="@style/met_edit_profile"
+                                android:digits="0123456789"
+                                android:imeOptions="actionNext"
+                                android:inputType="phone"
+                                android:maxLength="15"
+                                android:nextFocusDown="@+id/etDOB"
+                                android:padding="2dp"
+                                android:paddingStart="5dp"
+                                app:met_floatingLabel="none"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlDOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.tookancustomer.plugin.MaterialEditText
+                            android:id="@+id/etDOB"
+                            style="@style/met_edit_profile"
+                            android:imeOptions="actionNext"
+                            android:inputType="textNoSuggestions"
+                            android:longClickable="false"
+                            android:nextFocusDown="@+id/etAddress"/>
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:background="@color/transparent"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/icon_calender"/>
+
+                    </RelativeLayout>
+
+                    <com.tookancustomer.plugin.MaterialEditText
+                        android:id="@+id/etAddress"
+                        style="@style/met_edit_profile"
+                        android:maxLines="2"
+                        android:nextFocusDown="@+id/etCurrentPassword"
+                        android:singleLine="false"/>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlCurrentPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.tookancustomer.plugin.MaterialEditText
+                            android:id="@+id/etCurrentPassword"
+                            style="@style/met_edit_profile"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPassword|textNoSuggestions"
+                            android:longClickable="false"
+                            android:maxLength="25"
+                            android:nextFocusDown="@+id/etNewPassword"/>
+
+                        <ImageButton
+                            android:id="@+id/ibViewCurrentPassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/transparent"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            app:srcCompat="@drawable/ic_eye_inactive"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlNewPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp">
+
+                        <com.tookancustomer.plugin.MaterialEditText
+                            android:id="@+id/etNewPassword"
+                            style="@style/met_edit_profile"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword|textNoSuggestions"
+                            android:longClickable="false"
+                            android:maxLength="25"/>
+
+                        <ImageButton
+                            android:id="@+id/ibViewNewPassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/transparent"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            app:srcCompat="@drawable/ic_eye_inactive"/>
+
+                    </RelativeLayout>
+
+                    <com.tookancustomer.plugin.MaterialEditText
+                        android:id="@+id/etPassword"
+                        style="@style/met_edit_profile"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:maxLength="6"/>
+
+                    <LinearLayout
+                        android:id="@+id/llSelectLanguage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-8dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <com.tookancustomer.plugin.MaterialEditText
+                            android:id="@+id/etChooseLanguage"
+                            style="@style/met_edit_profile"
+                            android:focusable="false"/>
+
+                        <Spinner
+                            android:id="@+id/spinnerChooseLanguage"
+                            android:layout_width="1dp"
+                            android:layout_height="1dp"
+                            android:spinnerMode="dialog"/>
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlSochitelLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <com.tookancustomer.plugin.MaterialEditText
+                            android:id="@+id/etSochitelId"
+                            style="@style/met_edit_profile"
+                            tools:text="12345"
+                            android:focusable="false"/>
+
+                        <TextView
+                            android:id="@+id/tvActionSochitelId"
+                            style="@style/CustomTextAppearance.MavenMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            tools:text="Add"
+                            android:layout_alignParentEnd="true"
+                            android:textAppearance="@style/CustomTextAppearance.Bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_large" />
+
+
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/llAdditionalInfo"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/_5dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:visibility="gone">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="#03000000"-->
+                <!--android:paddingBottom="@dimen/_5dp"-->
+                <!--android:paddingStart="@dimen/_20dp"-->
+                <!--android:paddingTop="@dimen/_5dp"-->
+                <!--android:text="@string/additional_info"-->
+                <!--android:textColor="#50333333" />-->
+                <!--&lt;!&ndash;Custom Field starts here&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:id="@+id/llCustomFields"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/tvRequiredCustomField"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:layout_marginStart="35dp"-->
+                <!--android:layout_marginEnd="35dp"-->
+                <!--android:layout_marginTop="@dimen/activity_horizontal_margin"-->
+                <!--android:orientation="vertical"-->
+                <!--android:showDividers="none">-->
+
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;CustomField ends here&ndash;&gt;-->
+                <!--</LinearLayout>-->
+
+                <include layout="@layout/layout_profile_custom_fields"/>
+
+                <include layout="@layout/layout_profile_user_rights"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnProfile"
+            style="@style/rectangle_button_style_full"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>

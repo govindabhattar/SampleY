@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llTitleWeekContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.tookancustomer.customCalender.customviews.CustomTextView
+        android:id="@+id/tvDay1"
+        style="@style/WeekDayTitleStyle"
+        android:tag="dayOfWeek1" />
+
+    <com.tookancustomer.customCalender.customviews.CustomTextView
+        android:id="@+id/tvDay2"
+        style="@style/WeekDayTitleStyle"
+        android:tag="dayOfWeek2" />
+
+    <com.tookancustomer.customCalender.customviews.CustomTextView
+        android:id="@+id/tvDay3"
+        style="@style/WeekDayTitleStyle"
+        android:tag="dayOfWeek3" />
+
+    <com.tookancustomer.customCalender.customviews.CustomTextView
+        android:id="@+id/tvDay4"
+        style="@style/WeekDayTitleStyle"
+        android:tag="dayOfWeek4" />
+
+    <com.tookancustomer.customCalender.customviews.CustomTextView
+        android:id="@+id/tvDay5"
+        style="@style/WeekDayTitleStyle"
+        android:tag="dayOfWeek5" />
+
+    <com.tookancustomer.customCalender.customviews.CustomTextView
+        android:id="@+id/tvDay6"
+        style="@style/WeekDayTitleStyle"
+        android:tag="dayOfWeek6" />
+
+    <com.tookancustomer.customCalender.customviews.CustomTextView
+        android:id="@+id/tvDay7"
+        style="@style/WeekDayTitleStyle"
+        android:tag="dayOfWeek7" />
+
+</LinearLayout>

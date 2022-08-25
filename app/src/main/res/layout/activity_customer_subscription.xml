@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey_bg">
+
+    <include layout="@layout/layout_header_common_new" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/noDataTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    tools:text="No Subscriptions available" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvCurrentPlan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Current Plan"
+                        android:layout_marginTop="@dimen/_15dp"
+                        android:layout_marginStart="@dimen/_14dp"
+                        android:padding="@dimen/_5dp"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+
+                        android:textAppearance="@style/CustomTextAppearance.Bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_18sp" />
+
+
+
+                    <include
+                        layout="@layout/customer_plans_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                    <TextView
+                        android:id="@+id/tvBrowsePlan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Browse Plan"
+                        android:layout_marginTop="@dimen/_15dp"
+                        android:layout_marginStart="@dimen/_14dp"
+                        android:padding="@dimen/_5dp"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:textAppearance="@style/CustomTextAppearance.Bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_18sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/subscriptionListRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        tools:listitem="@layout/customer_plans_list" />
+                </LinearLayout>
+
+                <include
+                    layout="@layout/layout_shimmer_animation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_8dp"
+                    tools:visibility="visible" />
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

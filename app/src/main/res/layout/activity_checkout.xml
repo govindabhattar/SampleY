@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_top_main_layout">
+
+    <include layout="@layout/layout_header_common" />
+
+    <include
+        layout="@layout/layout_shimmer_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlActionBar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/svCheckout"
+        style="@style/app_main_view_layout"
+        android:layout_above="@+id/tvProceedToPay"
+        android:background="@color/grey_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <include layout="@layout/layout_checkout_address" />
+
+            <include layout="@layout/layout_checkout_pickup_userdetails" />
+
+<!--            <include layout="@layout/layout_checkout_deliver_userdetails" />-->
+
+            <include layout="@layout/layout_checkout_userdetails" />
+
+            <CheckBox
+                android:id="@+id/cbDeliverAddressSameAsPickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="-6dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="@style/CustomTextAppearance.Regular"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_small"
+                android:visibility="gone" />
+
+            <include layout="@layout/layout_checkout_deliver_userdetails" />
+
+            <include layout="@layout/layout_checkout_cart" />
+
+            <include layout="@layout/layout_select_agent_view" />
+
+            <include layout="@layout/layout_checkout_datetime_view" />
+
+            <include layout="@layout/layout_side_order_checkout" />
+
+            <include layout="@layout/layout_checkout_description" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tvProceedToPay"
+        style="@style/rectangle_button_style_full"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

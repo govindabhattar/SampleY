@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/layout_self_pickupdelivery" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/seperator_color" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/lighter_grey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pagerBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/llIndicators"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="8dp"
+                    android:divider="@drawable/horizontal_divider"
+                    android:orientation="horizontal"
+                    android:showDividers="middle" />
+
+            </RelativeLayout>
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/pbBanner"
+                app:indicatorColor="@color/colorPrimary"
+                app:indicatorName="BallPulseIndicator"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <!--//business category label-->
+
+        <TextView
+            android:id="@+id/vAdminCategoriesLabel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/lighter_grey"
+            android:visibility="gone" />
+
+        <!--//business category-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAdminCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="@dimen/_5dp"
+                android:padding="@dimen/_5dp" />
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/pbCategory"
+                app:indicatorColor="@color/colorPrimary"
+                app:indicatorName="BallPulseIndicator"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+        <!--//stores-->
+
+    </LinearLayout>
+</RelativeLayout>

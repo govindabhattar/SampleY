@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/_40dp"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/_10dp">
+
+
+
+    <TextView
+        android:id="@+id/tvNotesHeader"
+        style="@style/TaskDetailsLabelLoverCase" />
+
+    <TextView
+        android:id="@+id/etDescription"
+        style="@style/task_details_text"
+        android:layout_below="@+id/tvNotesHeader"
+        android:layout_alignBaseline="@+id/tvNotesHeader"
+        android:layout_toEndOf="@+id/tvNotesHeader" />
+
+
+
+
+
+    <!--<EditText-->
+        <!--android:id="@+id/etDescription"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/transparent"-->
+        <!--android:ellipsize="end"-->
+        <!--android:gravity="top|start"-->
+        <!--android:maxLines="5"-->
+        <!--android:minHeight="50dp"-->
+        <!--android:nestedScrollingEnabled="true"-->
+        <!--android:textAlignment="viewStart"-->
+        <!--android:textAppearance="@style/CustomTextAppearance.UltraLight"-->
+        <!--android:textColor="@color/et_text_color"-->
+        <!--android:textSize="@dimen/text_size_medium" />-->
+
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true">
+
+    <RelativeLayout
+        android:id="@+id/rlActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorAccent">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_selector_transparent_grey"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_back_white"
+                android:clickable="false"
+                android:duplicateParentState="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_selector_transparent_grey"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/img_delete"
+                android:clickable="false"
+                android:duplicateParentState="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/rlBack"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_extra_large" />
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:background="@color/white"
+        android:id="@+id/vpImages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlActionBar" />
+
+</RelativeLayout>

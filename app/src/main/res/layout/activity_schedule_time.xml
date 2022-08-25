@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    style="@style/app_top_main_layout"
+    tools:context="com.tookancustomer.ScheduleTimeActivity">
+
+    <include layout="@layout/layout_header_common" />
+
+    <LinearLayout style="@style/app_main_view_layout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llSelectDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSelectTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                tools:text="@string/select_date" />
+
+            <TextView
+                android:id="@+id/tvSelecteDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_8dp"
+                android:paddingTop="@dimen/_8dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:background="@color/grey_bg"/>
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTimeSlotsRecyclerList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/tvNoSlotsAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_size_large"
+            android:visibility="gone" />
+
+        <include layout="@layout/no_internet_connection" />
+
+    </LinearLayout>
+
+</RelativeLayout>

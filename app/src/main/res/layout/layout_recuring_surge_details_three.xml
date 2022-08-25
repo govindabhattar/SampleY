@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/headingTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/delivery_surge_charges"
+        android:textAppearance="@style/CustomTextAppearance.Bold"
+        android:textColor="@color/black"
+
+        android:textSize="@dimen/text_size_large" />
+
+    <TextView
+        android:id="@+id/textTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10dp"
+        android:text="@string/delivery_charges_may"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_normal" />
+
+    <LinearLayout
+        android:id="@+id/headingLayoutLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/dayTV"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5dp"
+            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium13"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tileTV"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5dp"
+            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium13"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/amountChargeTV"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5dp"
+            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium13" />
+
+        <TextView
+            android:id="@+id/occurrenceTV"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5dp"
+            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium13"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/amountTV"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5dp"
+            android:text="@string/total_amount"
+            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium13"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/surgeListRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/okBT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:textColor="@color/white" />
+
+</LinearLayout>

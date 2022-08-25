@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tookancustomer.UserDebtActivity">
+
+    <include layout="@layout/layout_header_common_new" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llBottomView"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/ic_bitcoin" />
+
+            <TextView
+                android:id="@+id/tvPendingAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textAppearance="@style/CustomTextAppearance.Bold"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_xxl"
+                tools:text="$20" />
+
+            <TextView
+                android:id="@+id/tvPendingAmountSubHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:textAppearance="@style/CustomTextAppearance.Regular"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_normal"
+                tools:text="Please settle the amount to continue using the app" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llBottomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnPay"
+                style="@style/rectangle_button_style"
+                android:layout_margin="60dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-50dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAmountSettlementMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    tools:text="Please settle the amount to continue using the app" />
+
+                <TextView
+                    android:id="@+id/tvSkip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_grey"
+                    android:padding="5dp"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_size_medium"
+                    tools:text="skip" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

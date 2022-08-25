@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlParentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rlPDPView1"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <include
+        android:id="@+id/rlPDPView1"
+        layout="@layout/layout_product_detail_view1"
+        android:visibility="gone" />
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rlPDPView2"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:visibility="gone">-->
+
+    <include
+        android:id="@+id/rlPDPView2"
+        layout="@layout/layout_product_detail_view2" />
+
+    <!--</RelativeLayout>-->
+
+    <!--<include layout="@layout/layout_product_detail_view1"-->
+    <!--android:id="@+id/pdpView1"/>-->
+
+    <!--<android.support.design.widget.CoordinatorLayout-->
+    <!--android:id="@+id/clParentLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_above="@+id/rlbottomView">-->
+
+    <!--<android.support.design.widget.AppBarLayout-->
+    <!--android:id="@+id/appbarLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="250dp"-->
+    <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+    <!--<android.support.design.widget.CollapsingToolbarLayout-->
+    <!--android:id="@+id/collapsingToolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:contentScrim="@android:color/white"-->
+    <!--app:layout_scrollFlags="scroll|exitUntilCollapsed">-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:layout_collapseMode="parallax"-->
+    <!--app:layout_collapseParallaxMultiplier="1">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rlProductImage"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="250dp">-->
+
+    <!--<android.support.v4.view.ViewPager-->
+    <!--android:id="@+id/vpProductImage"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/llIndicators"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_margin="8dp"-->
+    <!--android:divider="@drawable/horizontal_divider"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:showDividers="middle" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="64dp"-->
+    <!--app:layout_collapseMode="pin"-->
+    <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light">-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="56dp">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rlBack"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:background="@drawable/bg_selector_transparent_grey"-->
+    <!--android:padding="16dp">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivBack"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:clickable="false"-->
+    <!--android:duplicateParentState="true"-->
+    <!--android:rotationY="@integer/locale_mirror_flip"-->
+    <!--app:srcCompat="@drawable/ic_back" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvHeading"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginEnd="40dp"-->
+    <!--android:layout_toEndOf="@+id/rlBack"-->
+    <!--android:ellipsize="end"-->
+    <!--android:gravity="center"-->
+    <!--android:maxLines="1"-->
+    <!--android:textAppearance="@style/CustomTextAppearance.Regular"-->
+    <!--android:textColor="@color/primary_text_color"-->
+    <!--android:textSize="@dimen/header_text_size" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <!--</android.support.design.widget.CollapsingToolbarLayout>-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+    <!--android:id="@+id/nsvScrollBar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvProductDetails"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:padding="15dp"-->
+    <!--android:text="@string/product_detail"-->
+    <!--android:textAlignment="viewStart"-->
+    <!--android:textAppearance="@style/CustomTextAppearance.Light"-->
+    <!--android:textColor="@color/colorPrimary"-->
+    <!--android:textSize="@dimen/text_size_normal"-->
+    <!--android:visibility="gone" />-->
+
+    <!--<View-->
+    <!--style="@style/slider_horizontal_view"-->
+    <!--android:layout_height="3dp"-->
+    <!--android:layout_marginEnd="0dp"-->
+    <!--android:layout_marginStart="0dp"-->
+    <!--android:layout_marginTop="0dp"-->
+    <!--android:background="@drawable/shadow_gradient"-->
+    <!--android:visibility="gone" />-->
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/llNLevelParent"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvProductName"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="3dp"-->
+    <!--android:layout_marginEnd="@dimen/activity_horizontal_margin"-->
+    <!--android:textAlignment="viewStart"-->
+    <!--android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+    <!--android:layout_marginTop="@dimen/_10dp"-->
+    <!--android:textAppearance="@style/CustomTextAppearance.SemiBold"-->
+    <!--android:textColor="@color/primary_text_color"-->
+    <!--android:textSize="@dimen/text_size_medium15" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvAddress"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="3dp"-->
+    <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:layout_marginRight="@dimen/activity_horizontal_margin"-->
+    <!--android:layout_marginTop="7dp"-->
+    <!--android:textAlignment="viewStart"-->
+    <!--android:textAppearance="@style/CustomTextAppearance.SemiBold"-->
+    <!--android:textColor="@color/primary_text_color"-->
+    <!--android:textSize="@dimen/text_size_medium15" />-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvMerchantName"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="3dp"-->
+    <!--android:layout_marginEnd="@dimen/activity_horizontal_margin"-->
+    <!--android:textAlignment="viewStart"-->
+    <!--android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+    <!--android:layout_marginTop="7dp"-->
+    <!--android:textAppearance="@style/CustomTextAppearance.SemiBold"-->
+    <!--android:textColor="@color/primary_text_color"-->
+    <!--android:textSize="@dimen/text_size_medium15" />-->
+
+
+    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/tvDescription"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginBottom="3dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginStart="@dimen/activity_horizontal_margin"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginEnd="@dimen/activity_horizontal_margin"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginTop="@dimen/_5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textAppearance="@style/CustomTextAppearance.Light"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textColor="@color/primary_text_color"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textSize="@dimen/text_size_medium"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:visibility="visible" />&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context="androidmaster.resizabletextview.ProductDetailActivity">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvDescription"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textAlignment="viewStart"-->
+    <!--android:layout_marginBottom="3dp"-->
+    <!--android:layout_marginEnd="@dimen/activity_horizontal_margin"-->
+    <!--android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+    <!--android:layout_marginTop="@dimen/_5dp"-->
+    <!--android:textAppearance="@style/CustomTextAppearance.Light"-->
+    <!--android:textColor="@color/primary_text_color"-->
+    <!--android:textSize="@dimen/text_size_medium"-->
+    <!--android:visibility="visible" />-->
+    <!--</LinearLayout>-->
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/llPriceAddRemove"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/_10dp"-->
+    <!--android:orientation="vertical">-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="@dimen/_10dp"-->
+    <!--android:layout_marginTop="@dimen/_10dp"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center|end"-->
+    <!--android:layout_weight="0.6"-->
+    <!--android:gravity="end">-->
+
+    <!--<include-->
+    <!--layout="@layout/layout_item_quantity_selector"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_gravity="center|end|bottom"-->
+    <!--android:gravity="end|bottom" />-->
+
+    <!--</RelativeLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--&lt;!&ndash;Custom Field Number&ndash;&gt;-->
+    <!--<LinearLayout-->
+    <!--android:id="@+id/llPDPCustomFieldsNumber"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:showDividers="middle" />-->
+    <!--&lt;!&ndash;CustomField Number ends here&ndash;&gt;-->
+
+    <!--&lt;!&ndash;Custom Field starts here&ndash;&gt;-->
+    <!--<LinearLayout-->
+    <!--android:id="@+id/llPDPCustomFields"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:showDividers="middle" />-->
+    <!--&lt;!&ndash;CustomField ends here&ndash;&gt;-->
+
+
+    <!--<fragment-->
+    <!--android:id="@+id/map"-->
+    <!--class="com.tookancustomer.mapfiles.TouchableMapFragment"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="200dp"-->
+    <!--android:layout_marginTop="@dimen/_10dp" />-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/tvCustomize"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginBottom="@dimen/_10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginTop="@dimen/_10dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:paddingStart="@dimen/activity_horizontal_margin"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:paddingEnd="@dimen/activity_horizontal_margin"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="@string/customize"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textAppearance="@style/CustomTextAppearance.SemiBold"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textColor="@color/colorAccent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textSize="@dimen/text_size_medium" />&ndash;&gt;-->
+
+
+    <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+
+    <!--&lt;!&ndash;<ScrollView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_above="@+id/rlbottomView"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_below="@+id/rlActionBar"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:scrollIndicators="none">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;&ndash;&gt;-->
+    <!--&lt;!&ndash;</ScrollView>&ndash;&gt;-->
+    <!--</android.support.design.widget.CoordinatorLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rlbottomView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true">-->
+
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rlProceed"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<View-->
+    <!--style="@style/blank_view_pdp"-->
+    <!--android:layout_marginTop="@dimen/_0dp" />-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginEnd="@dimen/activity_horizontal_margin"-->
+    <!--android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_weight="0.5"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvPrice"-->
+    <!--style="@style/tvPDP"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:textAlignment="viewStart"-->
+    <!--android:gravity="center_vertical" />-->
+
+
+    <!--</LinearLayout>-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="0.5">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvProceed"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="@dimen/_10dp"-->
+    <!--android:layout_marginTop="@dimen/_10dp"-->
+    <!--android:background="@drawable/app_button_background_slightly_rounded"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="@dimen/_5dp"-->
+    <!--android:text="@string/proceed"-->
+    <!--android:textAppearance="@style/CustomTextAppearance.SemiBold"-->
+    <!--android:textColor="@color/btn_text_color"-->
+    <!--android:textSize="@dimen/text_size_medium" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+
+    <!--</RelativeLayout>-->
+
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rlBottomLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/rlProceed">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvMinOrderAmount"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/nine_grey"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="5dp"-->
+    <!--android:textAppearance="@style/CustomTextAppearance.SemiBold"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="@dimen/text_size_small"-->
+    <!--android:visibility="gone" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rlTotalQuantity"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_below="@+id/tvMinOrderAmount"-->
+    <!--android:background="@drawable/app_button_background_rect">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvTotalQuantity"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginStart="15dp"-->
+    <!--android:letterSpacing="0.01"-->
+    <!--android:textAppearance="@style/CustomTextAppearance.SemiBold"-->
+    <!--android:textColor="@color/btn_text_color"-->
+    <!--android:textSize="@dimen/text_size_normal" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvSubTotal"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginEnd="15dp"-->
+    <!--android:background="@drawable/bg_transparent_20"-->
+    <!--android:paddingBottom="5dp"-->
+    <!--android:paddingEnd="15dp"-->
+    <!--android:paddingStart="15dp"-->
+    <!--android:paddingTop="5dp"-->
+    <!--android:textAppearance="@style/CustomTextAppearance.SemiBold"-->
+    <!--android:textColor="@color/btn_text_color"-->
+    <!--android:textSize="@dimen/text_size_normal" />-->
+
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/fabCart"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_centerInParent="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="@drawable/ic_cart" />&ndash;&gt;-->
+
+    <!--</RelativeLayout>-->
+
+    <!--</RelativeLayout>-->
+
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>

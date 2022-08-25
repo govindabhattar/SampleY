@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etCountryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:drawablePadding="8dp"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:textAppearance="@style/CustomTextAppearance.UltraLight"
+            android:textColor="@color/et_text_color"
+            android:textColorHint="@color/black_30"
+            android:textSize="@dimen/text_size_extra_large" />
+
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:digits="0123456789"
+            android:gravity="center_vertical"
+            android:inputType="phone"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:textCursorDrawable="@drawable/custom_edittext_cursor"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textAppearance="@style/CustomTextAppearance.UltraLight"
+            android:textColor="@color/et_text_color"
+            android:textColorHint="@color/et_hint_color"
+            android:textSize="@dimen/text_size_extra_large" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginEnd="@dimen/_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/boundary_grey"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_grey" />
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginStart="@dimen/_5dp"
+            android:layout_weight="1"
+            android:background="@drawable/boundary_blue_fill"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

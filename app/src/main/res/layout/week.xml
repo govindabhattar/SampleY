@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.tookancustomer.customviews.rangedatepicker.CalendarRowView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.tookancustomer.customviews.rangedatepicker.CalendarCellView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light" />
+
+    <com.tookancustomer.customviews.rangedatepicker.CalendarCellView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light" />
+
+    <com.tookancustomer.customviews.rangedatepicker.CalendarCellView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light" />
+
+    <com.tookancustomer.customviews.rangedatepicker.CalendarCellView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light" />
+
+    <com.tookancustomer.customviews.rangedatepicker.CalendarCellView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light" />
+
+    <com.tookancustomer.customviews.rangedatepicker.CalendarCellView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light" />
+
+    <com.tookancustomer.customviews.rangedatepicker.CalendarCellView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light" />
+</com.tookancustomer.customviews.rangedatepicker.CalendarRowView>

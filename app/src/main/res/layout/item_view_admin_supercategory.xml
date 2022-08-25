@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlCategoryParent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/selector_grey"
+    android:clickable="true"
+    android:padding="8dp">
+
+    <com.tookancustomer.utility.SquareImageView
+        android:id="@+id/ivCategoryImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tvCategoryName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/ivCategoryImage"
+        android:layout_alignEnd="@+id/ivCategoryImage"
+        android:layout_alignStart="@+id/ivCategoryImage"
+        android:layout_alignTop="@+id/ivCategoryImage"
+        android:layout_centerInParent="true"
+        android:background="@drawable/overlay_admin_category"
+        android:gravity="center"
+        android:textAppearance="@style/CustomTextAppearance.Bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal" />
+</RelativeLayout>

@@ -1,0 +1,231 @@
+plugins {
+// Other plugins here if pre-existing
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'kotlin-android'
+}
+
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+android {
+
+    compileSdkVersion 31
+    defaultConfig {
+
+        minSdkVersion 21
+        targetSdkVersion 31
+        renderscriptTargetApi 25
+        renderscriptSupportModeEnabled true
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "GOOGLE_URL", '"https://maps.googleapis.com/maps/api/"'
+        multiDexEnabled true
+        manifestPlaceholders = [
+                deepLinkScheme: deepLinkScheme,
+                deepLinkHost: deepLinkHost
+        ]
+
+
+        /* ndk {
+             abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+         }*/
+
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        pickFirst('META-INF/LICENSE')
+        pickFirst('META-INF/LICENSE.txt')
+    }
+    flavorDimensions "default"
+
+    productFlavors {
+        yelo_marketplace {//color code for marketplace app is #2 296FF
+            applicationId "${APPLICATION_ID}"
+            versionCode 100
+            versionName '1.0.0'
+            buildConfigField "String", "APP_NAME", "\"$APP_NAME\""
+            resValue "string", "app_name", APP_NAME
+
+            buildConfigField "int", "FUGU_APP_TYPE", "1"
+            buildConfigField "boolean", "isPlayStoreUploaded", "true"
+            buildConfigField "boolean", "isForking", "false"
+            buildConfigField "boolean", "isYeloDemoApp", "false"
+            resValue 'string', 'instagram_client_id', '"854e464758a14d1591b0bcf3b466fda7"'
+            resValue 'string', 'instagram_secret_id', '"e9a99210cf064755b266a0476659d4e1"'
+            resValue 'string', 'instagram_redirection_url', '"https://oauth.io/auth"'
+
+
+            buildConfigField "String", "GOOGLE_CLIENT_ID", "\"$GOOGLE_CLIENT_ID\""
+
+
+            buildConfigField "String", "FACEBOOK_APP_ID", "\"$FACEBOOK_APP_ID\""
+            resValue "string", "facebook_app_id", FACEBOOK_APP_ID
+
+
+            buildConfigField "String", "GOOGLE_MAP_KEY", "\"$GOOGLE_MAP_KEY\""
+            resValue "string", "google_maps_key1", GOOGLE_MAP_KEY
+
+            buildConfigField "String", "MARKETPLACE_REF_ID", "\"$MARKETPLACE_REF_ID\""
+
+            dimension "default"
+        }
+
+
+
+        applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                outputFileName = productFlavors[0].name + ".apk"
+            }
+        }
+
+    }
+
+}
+
+ext {
+    supportLibraryVersion = "27.1.1"
+    playServicesVersion = "12.0.1"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //android support dependencies
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation "androidx.work:work-runtime:2.7.1"
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.5.0'
+
+    //kotlin
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation ('com.google.firebase:firebase-iid:21.1.0') {
+        transitive = true
+    }
+
+    //source code- dex file coverter
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //android firebase dependencies
+    implementation 'com.google.firebase:firebase-core:20.1.0'
+    implementation "com.google.firebase:firebase-messaging:23.0.0"
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.8'
+    implementation 'com.google.firebase:firebase-analytics:20.1.0'
+
+    //google (login, analytics, map and location) dependencies
+    implementation "com.google.android.gms:play-services-maps:18.0.2"
+    implementation "com.google.android.gms:play-services-location:19.0.1"
+    implementation "com.google.android.gms:play-services-analytics:18.0.1"
+    implementation "com.google.android.gms:play-services-auth:20.1.0"
+
+    //java html parser
+    implementation 'org.jsoup:jsoup:1.11.3'
+
+    // retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+
+    //date parsing
+    implementation 'net.danlew:android.joda:2.10.2'
+
+    //paper db (storing data)
+    implementation 'io.github.pilgr:paperdb:2.7.2'
+
+    //Calligraphy (custom font lib)
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+
+    //facebook login & event
+    implementation 'com.facebook.android:facebook-login:12.1.0'
+    implementation 'com.facebook.android:facebook-marketing:4.42.0'
+
+    //multi picker (Image library) and circular view
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.kbeanie:multipicker:1.1.31@aar'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    // for hippo
+    implementation 'io.hippochat:hippo:3.0.9'
+
+    // for barcode scanner (minSdkVersion less than 19 requires 3.3.0 otherwise can be upgraded)
+    implementation 'com.journeyapps:zxing-android-embedded:3.3.0'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
+
+    // for animations
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+
+    //for spannable link builder
+    implementation 'com.klinkerapps:link_builder:1.4.0'
+
+    //for loader
+    implementation 'com.tuyenmonkey:mkloader:1.4.0'
+    implementation 'com.wang.avi:library:2.1.3'
+
+    //for blur image
+    implementation 'com.wonderkiln:blurkit:1.0.0'
+
+    //vertical or horizontal steps of progress
+    implementation 'com.params.stepview:stepview:1.0.0'
+
+    //flightmap
+    implementation 'io.flightmap.app-android:io.flightmap.app-android:1.0.0'
+
+    //validating phone number
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.2.0'
+
+    //for shimmer effectF
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+
+    //custom tabs
+    implementation 'androidx.browser:browser:1.4.0'
+    implementation 'saschpe.android:customtabs:2.0.0'
+
+    //paytm upi
+    implementation 'com.paytm.appinvokesdk:appinvokesdk:1.6.8'
+
+    //razorpay upi
+    implementation 'com.razorpay:checkout:1.6.18'
+
+    // For Timeline
+    implementation 'com.github.tcqq:timelineview:2.1.2'
+    implementation 'eu.davidea:flexible-adapter:5.1.0'
+    implementation 'eu.davidea:flexible-adapter-ui:1.0.0'
+
+}
+

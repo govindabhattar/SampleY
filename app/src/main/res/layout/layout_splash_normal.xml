@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ic_splash_background" />-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:background="@color/action_bar_color"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/rlBackDemo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_selector_transparent_grey"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:rotationY="@integer/locale_mirror_flip"
+                app:srcCompat="@drawable/ic_back" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imgSplashLogo"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@mipmap/logo_splash_new" />-->
+
+        <ImageView
+            android:id="@+id/imgSplashText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/logo_splash" />
+
+        <LinearLayout
+            android:id="@+id/llNoInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_30dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_no_wifi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10dp"
+                android:text="@string/no_internet_connection"
+                android:textColor="@color/medium_grey" />
+
+            <Button
+                android:id="@+id/btnRetryConnection"
+                android:layout_width="@dimen/_120dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10dp"
+                android:background="@drawable/no_network_background"
+                android:padding="@dimen/_10dp"
+                android:text="@string/retry_text"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llWelcomeTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/padding_right_left"
+        android:paddingStart="@dimen/padding_right_left"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tvWelcomeTo"
+            style="@style/CustomTextAppearance.Light"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/CustomTextAppearance.UltraLight"
+            android:textColor="@color/primary_text_color_60"
+            android:textSize="@dimen/text_size_xxl" />
+
+        <TextView
+            android:id="@+id/tvAppName"
+            style="@style/CustomTextAppearance.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:letterSpacing="0.05"
+            android:textAppearance="@style/CustomTextAppearance.Light"
+            android:textColor="@color/heading_text_color_onboard"
+            android:textSize="@dimen/text_size_large" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/llActionsButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llWelcomeTo"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+        <!--android:visibility="gone"-->
+        <RelativeLayout
+            android:id="@+id/rlEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_right_left"
+            android:layout_marginStart="@dimen/padding_right_left"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center">
+
+            <com.tookancustomer.plugin.MaterialEditText
+                android:id="@+id/etEmail"
+                style="@style/edittext_style"
+                android:layout_toEndOf="@+id/llCountryCode"
+                android:gravity="start"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress|textNoSuggestions"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/text_size_large"
+                app:met_underlineColor="@color/edit_text_line_color_light" />
+
+
+            <LinearLayout
+                android:id="@+id/llCountryCode"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/selector_grey"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvCountryCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textAppearance="@style/CustomTextAppearance.UltraLight"
+                    android:textColor="@color/et_text_color"
+                    android:textSize="@dimen/text_size_large" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:includeFontPadding="false"
+                    app:srcCompat="@drawable/ic_icon_country_code_arrow" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/continueLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/rlEmail"
+            android:layout_marginEnd="@dimen/padding_right_left"
+            android:layout_marginStart="@dimen/padding_right_left"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvContinue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/et_text_color"
+                android:textSize="@dimen/text_size_large" />
+
+            <ImageView
+                android:layout_width="@dimen/continue_width"
+                android:layout_height="@dimen/continue_height"
+                android:layout_marginStart="5dp"
+                android:rotationY="@integer/locale_mirror_flip"
+                app:tint="@color/et_text_color"
+                app:srcCompat="@drawable/ic_icon_arrow" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvContinueWith"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp"
+            android:textAppearance="@style/CustomTextAppearance.UltraLight"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_large" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llFacebook"
+                android:layout_width="fill_parent"
+                android:layout_height="58dp"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/facebook_button_background"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    app:srcCompat="@drawable/ic_fb_icon" />
+
+                <TextView
+                    android:id="@+id/tvFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text="FACEBOOK" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llGPlus"
+                android:layout_width="fill_parent"
+                android:layout_height="58dp"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/google_button_background"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+                <!--android:visibility="gone"-->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10dp"
+                    app:srcCompat="@drawable/ic_google" />
+
+                <TextView
+                    android:id="@+id/tvGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text="Google" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llInstagram"
+                android:layout_width="fill_parent"
+                android:layout_height="58dp"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/instagram_button_background"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="gone">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    app:srcCompat="@drawable/ic_instagram_white" />
+
+                <TextView
+                    android:id="@+id/tvInstagram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:text="Instagram" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/_15dp">
+
+    <ImageView
+        android:id="@+id/ivOptionImage"
+        android:layout_width="@dimen/_20dp"
+        android:layout_height="@dimen/_20dp"
+        tools:src="@drawable/check_box_unchecked" />
+
+
+    <TextView
+        android:id="@+id/tvOptionName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/CustomTextAppearance.Regular"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_normal"
+        tools:text="OPtion 1" />
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@drawable/popup_cornered_border"
+    android:elevation="5dp"
+    android:layout_margin="@dimen/_2dp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_did_you_also_want"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:textAppearance="@style/CustomTextAppearance.Bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_extra_large"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOftenBought"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="3"
+        android:layout_marginStart="@dimen/_10dp"
+        android:orientation="horizontal"
+        tools:listitem="@layout/itemview_product_grid"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/seperator_color" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="2.01">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvViewMore"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_more"
+            android:gravity="center"
+            android:padding="@dimen/_10dp"
+            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_medium13"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight=".01"
+            android:layout_height="match_parent"
+            android:background="@color/seperator_color" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvContinue"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_continue_to_checkout"
+            android:gravity="center"
+            android:padding="@dimen/_10dp"
+            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_medium13"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+</LinearLayout>
+

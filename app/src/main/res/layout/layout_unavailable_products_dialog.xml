@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginStart="@dimen/_20dp"
+    android:layout_marginTop="@dimen/_20dp"
+    android:layout_marginBottom="@dimen/_20dp"
+    android:layout_marginEnd="@dimen/_20dp"
+    android:background="@drawable/popup_cornered_border"
+    android:padding="@dimen/_15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/headingTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_15dp"
+            android:letterSpacing="0.1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_large"
+            tools:text="Product Not Available" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nine_grey"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/productNameHeadingTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_1dp"
+                android:layout_marginTop="@dimen/_1dp"
+                android:layout_marginBottom="@dimen/_1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="@color/black"
+                tools:text="Product Name" />
+
+            <TextView
+                android:id="@+id/availabilityTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textColor="@color/black"
+                tools:text="Availability" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productListRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/doneTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15dp"
+            android:background="@drawable/app_button_round_corners_red"
+            android:paddingStart="@dimen/_25dp"
+            android:paddingTop="@dimen/_10dp"
+            android:paddingEnd="@dimen/_25dp"
+            android:paddingBottom="@dimen/_10dp"
+            android:text="Done"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlQuantitySelector"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5dp">
+
+    <ImageView
+        android:id="@+id/ivForwardArrowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="7dp"
+        android:rotationY="@integer/locale_mirror_flip"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_arrow_accent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutQuantitySelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_round_layer_shadow"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/minusWIthTextLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rlRemoveItem"
+                android:layout_width="26dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_selector_transparent_grey"
+                android:paddingStart="9dp"
+                android:paddingEnd="9dp">
+
+                <ImageView
+                    android:id="@+id/imageViewMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_storefront_remove_button" />
+            </RelativeLayout>
+
+            <TextSwitcher
+                android:id="@+id/itemCountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/cart_text_bg"
+                android:paddingStart="@dimen/_7dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="@dimen/_7dp"
+                android:paddingBottom="2dp"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_medium"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/cart_text_bg"
+                android:gravity="center"
+                android:padding="@dimen/_7dp"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_medium"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAddItem"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@drawable/bg_selector_transparent_grey"
+            android:paddingStart="9dp"
+            android:paddingEnd="9dp">
+
+            <ImageView
+                android:id="@+id/imageViewPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/addText"
+                android:tint="@color/colorPrimary"
+                app:srcCompat="@drawable/ic_storefront_add_button" />
+
+            <TextView
+                android:id="@+id/addText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="@dimen/_16dp"
+                android:text="Add"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_12sp"
+                android:visibility="gone"
+                tools:visibility="gone" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvOutOfStockText"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxWidth="100dp"
+        android:maxLines="2"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/text_size_medium13"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvSingleSelectionButton"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/bg_white_round_layer_shadow"
+        android:elevation="5dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:paddingTop="5dp"
+        android:paddingBottom="6dp"
+        android:textAppearance="@style/CustomTextAppearance.SemiBold"
+        android:textColor="@drawable/text_selector_accent_textview"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llShareProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_2dp"
+        android:layout_toRightOf="@+id/linearLayoutQuantitySelector"
+        android:background="@drawable/selector_grey"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_share" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/colorVW"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/colorPrimary" />
+
+
+        <include
+            android:id="@+id/layoutSplashNormal"
+            layout="@layout/layout_splash_normal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+        <!--android:visibility="gone"-->
+
+        <TextView
+            android:id="@+id/tvReferenceId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@+id/tvServerName"
+            android:padding="16dp"
+            android:text="@string/device_type"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_normal"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvServerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="6dp"
+            android:padding="16dp"
+            android:text="@string/server"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_normal"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlChooseLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tvServerName"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/selector_grey"
+            android:gravity="center"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <com.tookancustomer.utility.CustomTextView
+                android:id="@+id/tvChooseLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="7dp"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_normal"
+                app:drawableEndCompat="@drawable/ic_icon_country_code_arrow" />
+
+            <Spinner
+                android:id="@+id/btnChooseLanguage"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:spinnerMode="dropdown" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvReferenceId"
+            android:background="@color/action_bar_color"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rlBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_selector_transparent_grey"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    app:srcCompat="@drawable/ic_back" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llAccessTokenLogin"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

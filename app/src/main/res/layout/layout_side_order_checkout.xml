@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llSideOrder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <com.tookancustomer.utility.CustomTextView
+        android:id="@+id/tvSideOrderLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:gravity="center|start"
+        android:singleLine="true"
+        android:text="@string/you_may_also_like"
+        android:textAlignment="viewStart"
+        android:textAllCaps="true"
+        android:visibility="gone"
+        android:textAppearance="@style/CustomTextAppearance.Regular"
+        android:textColor="@color/colorReferCode"
+        android:textSize="@dimen/text_size_medium" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSideOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

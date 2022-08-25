@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llParentView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_grey"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_seprator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/seperator_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        android:padding="7dp">
+
+        <RelativeLayout
+            android:id="@+id/rlImageParent"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/background_round_corners">
+
+            <com.tookancustomer.utility.SquareImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_image_placeholder" />
+
+            <ImageView
+                android:id="@+id/ivSponsoredRibbon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/ic_sponsor_ribbon" />
+
+
+            <LinearLayout
+                android:id="@+id/llRatingImageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shadow_dark_up"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ivAverageRatingStar"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_star_yellow_10" />
+
+                <TextView
+                    android:id="@+id/tvAverageRatingImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="4dp"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_medium" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/tvRestaurantName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginBottom="3dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/CustomTextAppearance.MavenMedium"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/_40dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true">
+                    <ImageView
+                        android:id="@+id/iv_wishlist_unselected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_favourite_unselect">
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/iv_wishlist_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_favourite_selected"
+                        android:visibility="gone">
+                    </ImageView>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvRestaurantCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="3dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/CustomTextAppearance.Regular"
+                android:textColor="@color/text_color_light_less"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/tvRestaurantAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="3dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/CustomTextAppearance.MavenMedium"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="hgjhkljkljhgcfhjkllkhgfhjklhghjklhghjklhgcfhjklhgchjkghjklhghjklhgbcghjkgbcgvhjk"
+                tools:visibility="visible" />
+
+            <com.tookancustomer.utility.CustomTextView
+                android:id="@+id/tvDeliveryTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="3dp"
+                android:drawablePadding="4dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:textAppearance="@style/CustomTextAppearance.MavenMedium"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_medium"
+                app:drawableStartCompat="@drawable/ic_clock" />
+
+            <com.tookancustomer.utility.CustomTextView
+                android:id="@+id/tvDeliveryCharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="3dp"
+                android:drawablePadding="4dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:textAppearance="@style/CustomTextAppearance.MavenMedium"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_medium" />
+
+            <com.tookancustomer.utility.CustomTextView
+                android:id="@+id/tvDeliverBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="3dp"
+                android:drawablePadding="4dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:textAppearance="@style/CustomTextAppearance.MavenMedium"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_medium" />
+
+
+            <TextView
+                android:id="@+id/tvRestaurantTimings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/CustomTextAppearance.MavenMedium"
+                android:textSize="@dimen/text_size_medium"
+                android:visibility="gone"
+                tools:text="8:19PM-11:19PM" />
+
+            <TextView
+                android:id="@+id/tvRestaurantOpenStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/CustomTextAppearance.MavenMedium"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/tvCustomTag"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/_35dp"
+                android:layout_gravity="end"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:background="@drawable/app_button_round_corners_custom"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxEms="7"
+                android:maxLines="1"
+                android:padding="@dimen/_5dp"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                tools:text="Custom"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvMerchantDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:background="@drawable/merchant_discount_background"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:textAllCaps="true"
+        android:textAppearance="@style/CustomTextAppearance.MavenMedium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small" />
+    <View
+        android:id="@+id/view_seprator1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/seperator_color" />
+
+</LinearLayout>

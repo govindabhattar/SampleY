@@ -1,0 +1,651 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Regular</item>
+        <item name="android:windowBackground">@color/app_main_bg_color</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="popupMenuStyle">@style/MyPopupMenu</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="AppThemeMap" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Regular</item>
+        <item name="android:windowBackground">@color/app_main_bg_color</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="popupMenuStyle">@style/MyPopupMenu</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+
+    <!--Custom text appearances-->
+    <style name="CustomTextAppearance.Regular" parent="android:TextAppearance">
+        <item name="fontPath">fonts/maven_pro_regular.otf</item>
+        <!--<item name="fontPath">fonts/OpenSans-Regular.ttf</item>-->
+    </style>
+
+    <style name="CustomTextAppearance.Medium" parent="android:TextAppearance">
+        <item name="fontPath">fonts/montserrat_medium.otf</item>
+        <!--<item name="fontPath">fonts/Montserrat-Medium.otf</item>-->
+    </style>
+
+    <style name="CustomTextAppearance.Light" parent="android:TextAppearance">
+        <item name="fontPath">fonts/maven_pro_light_300.otf</item>
+        <!--<item name="fontPath">fonts/OpenSans-Light.ttf</item>-->
+    </style>
+
+    <style name="CustomTextAppearance.MavenMedium" parent="android:TextAppearance">
+        <item name="fontPath">fonts/maven_pro_medium.ttf</item>
+        <!--<item name="fontPath">fonts/OpenSans-Light.ttf</item>-->
+    </style>
+
+    <style name="CustomTextAppearance.Avenir" parent="android:TextAppearance">
+        <item name="fontPath">fonts/avenir_next_demi.otf</item>
+        <!--<item name="fontPath">fonts/OpenSans-Light.ttf</item>-->
+    </style>
+
+    <style name="CustomTextAppearance.Bold" parent="android:TextAppearance">
+        <item name="fontPath">fonts/OpenSans-Bold.ttf</item>
+    </style>
+
+
+    <style name="CustomTextAppearance.SemiBold" parent="android:TextAppearance">
+        <item name="fontPath">fonts/OpenSans-Semibold.ttf</item>
+    </style>
+
+    <style name="CustomTextAppearance.UltraLight" parent="android:TextAppearance">
+        <item name="fontPath">fonts/Montserrat-UltraLight.otf</item>
+    </style>
+
+
+    <style name="CustomDialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_scale_out</item>
+    </style>
+
+
+    <!-- Dialog  application theme. -->
+    <style name="DialogTheme" parent="Theme.AppCompat.Translucent">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="Theme.AppCompat.Translucent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.AppCompat.Transparent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <!--OTP Layout Style-->
+    <style name="otp_et_style">
+        <item name="android:layout_width">38dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:textColor">@color/et_text_color</item>
+        <item name="android:textColorHint">@color/et_hint_color</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Regular</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:inputType">number</item>
+        <item name="android:digits">0123456789</item>
+        <item name="met_primaryColor">@color/colorAccent</item>
+        <item name="met_hideUnderline">false</item>
+        <item name="met_floatingLabel">none</item>
+        <item name="met_underlineColor">@color/light_grey</item>
+
+    </style>
+
+    <style name="slider_horizontal_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">@dimen/_16dp</item>
+        <item name="android:layout_marginEnd">@dimen/_16dp</item>
+        <item name="android:background">@color/seperator_color</item>
+    </style>
+
+    <style name="slider_textview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:background">@drawable/bg_side_menu</item>
+        <!--<item name="android:background">?attr/selectableItemBackground</item>-->
+
+        <item name="android:drawablePadding">@dimen/_16dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/selector_textcolor_white_accent</item>
+        <item name="android:textSize">@dimen/text_size_extra_large</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Regular</item>
+        <item name="android:onClick">sideMenuClick</item>
+
+        <item name="android:paddingStart">@dimen/_16dp</item>
+        <item name="android:paddingEnd">@dimen/_16dp</item>
+        <item name="android:paddingTop">@dimen/_8dp</item>
+        <item name="android:paddingBottom">@dimen/_8dp</item>
+        <item name="android:minHeight">@dimen/_50dp</item>
+        <!--<item name="android:paddingStart">@dimen/_16dp</item>-->
+        <!--<item name="android:paddingEnd">@dimen/_16dp</item>-->
+        <!--<item name="android:singleLine">true</item>-->
+        <!--<item name="android:ellipsize">end</item>-->
+    </style>
+
+    <style name="edittext_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+
+        <item name="android:paddingTop">10dp</item>
+        <!--<item name="android:paddingEnd">10dp</item>-->
+        <!--<item name="android:paddingBottom">22dp</item>-->
+        <!--<item name="android:paddingEnd">@dimen/padding_right</item>-->
+        <item name="android:paddingEnd">25dp</item>
+
+        <item name="android:textAlignment">viewStart</item>
+        <item name="met_textColor">@color/et_text_color</item>
+        <item name="android:textColorHint">@color/et_hint_color</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.UltraLight</item>
+
+        <item name="met_floatingLabelTextColor">@color/et_hint_color</item>
+        <item name="met_primaryColor">@color/colorAccent</item>
+        <item name="met_hideUnderline">false</item>
+        <item name="met_floatingLabel">none</item>
+    </style>
+
+    <style name="FullScreenDialog" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!--Edit Profile screen edittexts-->
+    <style name="edit_profile_edittext">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Light</item>
+        <item name="android:textAlignment">viewStart</item>
+
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingBottom">5dp</item>
+
+        <item name="met_hideUnderline">false</item>
+        <item name="met_floatingLabel">normal</item>
+
+        <item name="met_underlineColor">@color/edit_text_line_color_light</item>
+
+        <item name="met_floatingLabelTextSize">@dimen/text_size_small</item>
+        <item name="met_floatingLabelPadding">3dp</item>
+        <item name="met_floatingLabelTextColor">@color/et_hint_color</item>
+        <item name="met_textColorHint">@color/black</item>
+        <item name="met_primaryColor">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="met_edit_profile" parent="edit_profile_edittext">
+        <item name="met_floatingLabelAlwaysShown">true</item>
+    </style>
+
+    <style name="TaskDetailsLabel">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Medium</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textColor">@color/storefront_task_details_label_color</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+
+    <style name="TaskDetailsLabelLoverCase">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Regular</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+
+    <style name="task_details_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Regular</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="task_details_line">
+        <item name="android:layout_marginTop">@dimen/_10dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <style name="AllTasksAdapterLabel">
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Regular</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="AllTasksAdapterValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Regular</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+
+    <style name="rectangle_button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_margin">@dimen/activity_horizontal_margin</item>
+        <item name="android:textColor">@color/btn_text_color</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Regular</item>
+        <item name="android:background">@drawable/app_button_background_slightly_rounded</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:elevation">3dp</item>
+    </style>
+
+    <style name="button_background_white_stroke_accent" parent="rectangle_button_style">
+        <item name="android:textColor">@color/secondary_text_color</item>
+        <item name="android:background">@drawable/bg_white_stroke_accent</item>
+
+    </style>
+
+
+    <style name="rounded_button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_margin">@dimen/activity_horizontal_margin</item>
+        <item name="android:textColor">@color/btn_text_color</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Light</item>
+        <item name="android:background">@drawable/app_button_round_corners</item>
+        <item name="android:textSize">@dimen/text_size_extra_large</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:elevation">3dp</item>
+    </style>
+
+
+    <style name="rounded_button_accent_bg_style" parent="rounded_button_white_bg_style">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/app_button_round_corners_white_stroke</item>
+
+    </style>
+
+    <style name="rounded_button_white_bg_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginStart">50dp</item>
+        <item name="android:layout_marginEnd">50dp</item>
+        <item name="android:layout_marginTop">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginBottom">@dimen/activity_horizontal_margin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Regular</item>
+        <item name="android:background">@drawable/app_button_round_corners_white</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:elevation">3dp</item>
+    </style>
+
+    <style name="rectangle_button_style_full">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">57dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/btn_text_color</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Light</item>
+        <item name="android:background">@drawable/app_button_background_rect</item>
+        <item name="android:textSize">@dimen/text_size_extra_large</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:elevation">5dp</item>
+    </style>
+
+    <style name="textview_clickable_primary">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@drawable/text_selector_main_color_pressed</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Regular</item>
+        <item name="android:onClick">onClick</item>
+        <item name="android:clickable">true</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="app_top_main_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/app_main_bg_color0</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="app_main_view_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_below">@+id/rlActionBar</item>
+        <item name="android:background">@drawable/bg_app_upper_cornered_layout</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Feed_Popup_Theme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">
+            true
+        </item>
+        <item name="android:backgroundDimEnabled">
+            true
+        </item>
+        <item name="android:backgroundDimAmount">
+            0.7
+        </item>
+        <item name="android:windowCloseOnTouchOutside">
+            true
+        </item>
+    </style>
+
+
+    <style name="vegSwitch" parent="Theme.AppCompat.Light">
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorControlActivated">@color/color_veg</item>
+    </style>
+
+    <!--==================Material EditText default style =========================-->
+    <declare-styleable name="MaterialEditText">
+        <!-- The base color of the line and the texts. Default is black. -->
+        <attr name="met_baseColor" format="color" />
+        <!-- The highlight color of the line, and the floating label if the highlightFloatingLabel is true. -->
+        <attr name="met_primaryColor" format="color" />
+        <!-- How the floating label should be shown. Default is none -->
+        <attr name="met_floatingLabel">
+            <enum name="none" value="0" />
+            <enum name="normal" value="1" />
+            <enum name="highlight" value="2" />
+        </attr>
+        <!-- The color for when something is wrong.(e.g. exceeding max characters) -->
+        <attr name="met_errorColor" format="color" />
+        <!-- Min characters count limit. 0 means no limit. -->
+        <attr name="met_minCharacters" format="integer" />
+        <!-- max Characters count limit. 0 means no limit. -->
+        <attr name="met_maxCharacters" format="integer" />
+        <!-- Whether to show the bottom ellipsis in singleLine mode -->
+        <attr name="met_singleLineEllipsis" format="boolean" />
+        <!-- Reserved bottom text lines count, no matter if there is some helper/error text. -->
+        <attr name="met_minBottomTextLines" format="integer" />
+        <!-- Helper text at the bottom -->
+        <attr name="met_helperText" format="string" />
+        <!-- Helper text color -->
+        <attr name="met_helperTextColor" format="color" />
+        <!-- Font of the paint used to draw accent texts -->
+        <attr name="met_accentTypeface" format="string" />
+        <!-- Font used on view -->
+        <attr name="met_typeface" format="string" />
+        <!-- Custom float label text -->
+        <attr name="met_floatingLabelText" format="string" />
+        <!-- spacing between the main text and the floating label -->
+        <attr name="met_floatingLabelPadding" format="dimension" />
+        <!-- Hide underline -->
+        <attr name="met_hideUnderline" format="boolean" />
+        <!-- Underline's color -->
+        <attr name="met_underlineColor" format="color" />
+        <!-- Auto validateDataAtAddOnsPage -->
+        <attr name="met_autoValidate" format="boolean" />
+        <!-- Left icon -->
+        <attr name="met_iconStart" format="reference" />
+        <!-- Right icon -->
+        <attr name="met_iconEnd" format="reference" />
+        <!-- Padding between icon(s) and the main area. 8dp by default. -->
+        <attr name="met_iconPadding" format="dimension" />
+        <!-- The floating label's text size. 12sp by default. -->
+        <attr name="met_floatingLabelTextSize" format="dimension" />
+        <!-- The floating label's text color. -1 by default. -->
+        <attr name="met_floatingLabelTextColor" format="color" />
+        <!-- The bottom texts' size. 12sp by default. -->
+        <attr name="met_bottomTextSize" format="dimension" />
+        <!-- Always show the floating label, instead of animating it in/out. False by default. -->
+        <attr name="met_floatingLabelAlwaysShown" format="boolean" />
+        <!-- Always show the helper text, no matter if the edit text is focused. False by default. -->
+        <attr name="met_helperTextAlwaysShown" format="boolean" />
+        <!-- Whether use animation to show/hide the floating label. True by default. -->
+        <attr name="met_floatingLabelAnimating" format="boolean" />
+        <!-- Text color -->
+        <attr name="met_textColor" format="color" />
+        <!-- Hint Text Color -->
+        <attr name="met_textColorHint" format="color" />
+        <!-- Auto validateDataAtAddOnsPage on focus lost. False by default. -->
+        <attr name="met_validateOnFocusLost" format="boolean" />
+        <!-- Whether check the characters count at the beginning it's shown. True by default. -->
+        <attr name="met_checkCharactersCountAtBeginning" format="boolean" />
+    </declare-styleable>
+
+    <style name="NotificationDialogTheme" parent="android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowBackground">@drawable/background_round_corners_top</item>
+    </style>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="drawableStartCompat" format="reference" />
+        <attr name="drawableEndCompat" format="reference" />
+        <attr name="drawableTopCompat" format="reference" />
+        <attr name="drawableBottomCompat" format="reference" />
+    </declare-styleable>
+
+    <style name="MyPopupMenu" parent="@style/Widget.AppCompat.PopupMenu">
+        <item name="android:dropDownHorizontalOffset">-4dp</item>
+        <item name="android:dropDownVerticalOffset">4dp</item>
+    </style>
+
+    <style name="storefront_TabWidget">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Regular</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+    </style>
+
+    <style name="pdp_TabWidget">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Regular</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+    </style>
+
+    <declare-styleable name="CustomRatingBar">
+        <attr name="maxStars" format="integer" />
+        <attr name="stars" format="float" />
+        <attr name="starOff" format="reference|integer" />
+        <attr name="starOn" format="reference|integer" />
+        <attr name="starHalf" format="reference|integer" />
+        <attr name="starPadding" format="dimension" />
+        <attr name="belowTextSize" format="dimension" />
+        <attr name="belowTextColor" format="color" />
+        <attr name="compoundDrawablePadding" format="dimension" />
+        <attr name="viewMargin" format="dimension" />
+        <attr name="viewMinWidth" format="dimension" />
+        <attr name="onlyForDisplay" format="boolean" />
+        <attr name="halfStars" format="boolean" />
+        <attr name="animate" format="boolean" />
+        <attr name="displayText" format="boolean" />
+        <attr name="singleColor" format="boolean" />
+        <attr name="starColor" format="color" />
+        <attr name="noStarColor" format="color" />
+    </declare-styleable>
+
+
+    <style name="tvPDP">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance.Light</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+    </style>
+
+    <style name="blank_view_pdp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginTop">@dimen/_14sp</item>
+        <item name="android:background">@color/seperator_color</item>
+    </style>
+
+    <!--Calender style-->
+    <style name="WeekDayTitleStyle">
+        <item name="android:layout_width">@dimen/dayOfMonthBoxSize</item>
+        <item name="android:layout_height">@dimen/dayOfMonthBoxSize</item>
+        <item name="android:textSize">@dimen/text_size_week</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:paddingBottom">@dimen/dayOfMonthPaddingBottom</item>
+    </style>
+
+    <style name="DayOfMonthStyle">
+        <item name="android:layout_width">@dimen/dayOfMonthSize</item>
+        <item name="android:layout_height">@dimen/dayOfMonthSize</item>
+        <item name="android:textSize">@dimen/text_size_date</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">@dimen/dayOfMonthMinHeight</item>
+        <item name="android:minWidth">@dimen/dayOfMonthMinWidth</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:paddingBottom">@dimen/dayOfMonthPaddingBottom</item>
+        <item name="android:textColor">@color/default_date_color</item>
+    </style>
+
+    <style name="ContainerDayOfWeek">
+        <item name="android:layout_width">@dimen/dayOfMonthBoxSize</item>
+        <item name="android:layout_height">@dimen/dayOfMonthBoxSize</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="StripRange">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/strip_height</item>
+        <item name="android:background">@color/range_bg_color</item>
+        <item name="android:layout_centerVertical">true</item>
+
+
+    </style>
+
+    <!--Calendar style-->
+    <style name="CalendarTitle">
+        <item name="android:textSize">@dimen/calendar_text_large</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CalendarCell">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">center</item>
+    </style>
+
+    <style name="CalendarCell.DayHeader">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/calendar_text_small</item>
+    </style>
+
+    <style name="CalendarCell.CalendarDate">
+        <item name="android:textSize">@dimen/calendar_text_medium</item>
+    </style>
+
+    <!--Subscribe style-->
+    <style name="SubscribeRadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/_15dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:button">@drawable/custom_btn_radio</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/spinner_background</item>
+    </style>
+</resources>

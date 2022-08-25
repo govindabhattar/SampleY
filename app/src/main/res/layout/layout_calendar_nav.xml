@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlHeaderCalendar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10dp"
+    android:paddingBottom="@dimen/dateTitlePaddingBottom">
+
+    <View
+        android:id="@+id/topBlankView"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:visibility="gone"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:layout_marginLeft="@dimen/_5dp"
+        android:layout_marginRight="@dimen/_5dp"
+        android:layout_marginStart="@dimen/_5dp"
+        android:background="@color/dark_grey" />
+
+
+    <RelativeLayout
+        android:layout_below="@+id/topBlankView"
+        android:id="@+id/rlMonth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imgVNavLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_marginStart="@dimen/_5dp"
+            android:padding="@dimen/_10dp"
+            app:srcCompat="@drawable/ic_back" />
+
+        <com.tookancustomer.customCalender.customviews.CustomTextView
+            android:id="@+id/tvYearTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:tag="dateTitle"
+            android:text="FEBRUARY 2014"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_title" />
+
+        <ImageView
+            android:id="@+id/imgVNavRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_5dp"
+            android:layout_marginRight="@dimen/_5dp"
+            android:padding="@dimen/_10dp"
+            android:rotation="180"
+            app:srcCompat="@drawable/ic_back" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:visibility="gone"
+        android:layout_below="@+id/rlMonth"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:layout_marginLeft="@dimen/_5dp"
+        android:layout_marginRight="@dimen/_5dp"
+        android:layout_marginStart="@dimen/_5dp"
+        android:background="@color/dark_grey" />
+
+
+</RelativeLayout>

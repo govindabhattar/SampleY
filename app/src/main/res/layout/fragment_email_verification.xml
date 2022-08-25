@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_top_main_layout">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_15dp"
+            android:layout_marginEnd="@dimen/padding_right_left"
+            android:layout_marginStart="@dimen/padding_right_left"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvVerifyEmailHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:letterSpacing="0.05"
+                android:textColor="@color/heading_text_color_onboard"
+                android:textSize="@dimen/text_size_xxl" />
+
+            <TextView
+                android:id="@+id/tvVerifyEmailMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:letterSpacing="0.04"
+                android:textColor="@color/sub_text_color_onboard"
+                android:textSize="@dimen/text_size_normal" />
+
+            <Button
+                android:id="@+id/btnContinue"
+                style="@style/rectangle_button_style"
+                android:layout_margin="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvChangeEmail"
+                    style="@style/textview_clickable_primary"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:letterSpacing="0.05"
+                    android:padding="@dimen/_10dp" />
+
+                <TextView
+                    android:id="@+id/tvResendEmailLink"
+                    style="@style/textview_clickable_primary"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:letterSpacing="0.05"
+                    android:padding="@dimen/_10dp" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

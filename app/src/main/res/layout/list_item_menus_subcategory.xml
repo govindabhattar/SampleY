@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingEnd="15dp"
+    android:paddingStart="15dp"
+    android:paddingTop="15dp">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tvSubCategoryName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingEnd="20dp"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textAppearance="@style/CustomTextAppearance.SemiBold"
+        android:textColor="@color/primary_text_color_60"
+        android:textSize="@dimen/text_size_small"
+        tools:text="dsakhjdhasjdhsaasdkjsdkajdksa" />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tvMinSelection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:textAlignment="viewEnd"
+        android:textAllCaps="false"
+        android:textAppearance="@style/CustomTextAppearance.SemiBold"
+        android:textColor="@color/primary_text_color_60"
+        android:textSize="@dimen/text_size_tiny"
+        tools:text="Select any 3" />
+
+</LinearLayout>
+
+

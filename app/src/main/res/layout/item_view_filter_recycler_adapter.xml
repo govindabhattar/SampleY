@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_selector_item_view_filter_adapter"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/_15dp">
+
+
+        <View
+            android:id="@+id/viewAnySelected"
+            android:layout_width="@dimen/_5dp"
+            android:layout_height="@dimen/_5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_selector_filter_option_selected"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tvFilterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5dp"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_normal"
+            tools:text="Cusine" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:background="@color/lineColorFilterRecycler" />
+
+</LinearLayout>

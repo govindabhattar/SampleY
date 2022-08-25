@@ -1,0 +1,308 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/action_bar_color">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_selector_transparent_grey"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:rotationY="@integer/locale_mirror_flip"
+                app:srcCompat="@drawable/ic_back" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvConfirmAddress"
+            style="@style/CustomTextAppearance.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/rlBack"
+            android:textColor="#474747" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/vwShadow"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@+id/rlActionBar"
+        android:background="@drawable/shadow_gradient" />
+
+    <LinearLayout
+        android:id="@+id/llAddressType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vwShadow"
+        android:layout_marginTop="@dimen/_10dp"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/rlHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/boundary_grey"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <com.tookancustomer.utility.CustomTextView
+                android:id="@+id/tvHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                app:drawableStartCompat="@drawable/ic_confirm_page_home_active" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlWork"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/boundary_grey"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <com.tookancustomer.utility.CustomTextView
+                android:id="@+id/tvWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                app:drawableStartCompat="@drawable/ic_confirm_page_work_inactive" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlOther"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/boundary_grey"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <com.tookancustomer.utility.CustomTextView
+                android:id="@+id/tvOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                app:drawableStartCompat="@drawable/ic_confirm_page_other_inactive" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llAddressType">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvLabel"
+                style="@style/CustomTextAppearance.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end|start"
+                android:textAlignment="viewStart"
+                android:textColor="@color/nine_grey"
+                android:textSize="@dimen/text_size_small" />
+
+            <EditText
+                android:id="@+id/etLabel"
+                style="@style/CustomTextAppearance.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2dp"
+                android:background="@color/transparent"
+                android:textAlignment="viewStart" />
+
+            <View
+                android:id="@+id/vwLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:background="@color/seperator_color" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                style="@style/CustomTextAppearance.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="@color/nine_grey"
+                android:textSize="@dimen/text_size_small" />
+
+            <EditText
+                android:id="@+id/etAddress"
+                style="@style/CustomTextAppearance.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2dp"
+                android:background="@color/transparent"
+                android:focusableInTouchMode="false"
+                android:textAlignment="viewStart" />
+
+            <TextView
+                android:id="@+id/tvAddCustomAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:text="@string/add_custom_address"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvCustomAddress"
+                style="@style/CustomTextAppearance.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:textColor="@color/nine_grey"
+                android:textSize="@dimen/text_size_small"
+
+                android:visibility="gone"
+                />
+
+            <EditText
+                android:id="@+id/etCustomAddress"
+                style="@style/CustomTextAppearance.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2dp"
+                android:background="@color/transparent"
+                android:textAlignment="viewStart"
+                android:visibility="gone"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:background="@color/seperator_color" />
+
+
+            <TextView
+                android:id="@+id/tvFlatNo"
+                style="@style/CustomTextAppearance.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end|start"
+                android:textAlignment="viewStart"
+                android:textColor="@color/nine_grey"
+                android:textSize="@dimen/text_size_small" />
+
+            <EditText
+                android:id="@+id/etFlat"
+                style="@style/CustomTextAppearance.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2dp"
+                android:background="@color/transparent"
+                android:textAlignment="viewStart" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:background="@color/seperator_color" />
+
+            <TextView
+                android:id="@+id/tvLandmark"
+                style="@style/CustomTextAppearance.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end|start"
+                android:textAlignment="viewStart"
+                android:textColor="@color/nine_grey"
+                android:textSize="@dimen/text_size_small" />
+
+            <EditText
+                android:id="@+id/etLandmark"
+                style="@style/CustomTextAppearance.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2dp"
+                android:background="@color/transparent"
+                android:textAlignment="viewStart" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:background="@color/seperator_color" />
+
+            <TextView
+                android:id="@+id/tvPostalCode"
+                style="@style/CustomTextAppearance.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end|start"
+                android:textAlignment="viewStart"
+                android:textColor="@color/nine_grey"
+                android:textSize="@dimen/text_size_small" />
+
+            <EditText
+                android:id="@+id/etPostalCode"
+                style="@style/CustomTextAppearance.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2dp"
+                android:background="@color/transparent"
+                android:textAlignment="viewStart" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:background="@color/seperator_color" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        style="@style/rectangle_button_style"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_20dp" />
+
+</RelativeLayout>

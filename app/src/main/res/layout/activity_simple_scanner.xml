@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+
+    >
+    <!-- <RelativeLayout
+         android:id="@+id/rlBack"
+         android:layout_width="match_parent"
+         android:layout_height="?android:attr/actionBarSize"
+         android:layout_alignParentStart="true"
+         android:background="#10000000"
+         android:padding="16dp">
+
+         <ImageView
+             android:id="@+id/ivBack"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:padding="@dimen/_5dp"
+             android:src="@drawable/ic_back_white" />
+         <TextView
+             android:id="@+id/tvHeader"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             tools:text="ddddddd"
+             android:textSize="@dimen/_18sp"
+             android:layout_centerHorizontal="true"/>
+     </RelativeLayout>-->
+
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+        android:id="@+id/zxscan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/_15dp"
+        android:layout_marginStart="@dimen/_10dp"
+        android:src="@drawable/ic_back_white" />
+
+    <ImageView
+        android:id="@+id/ivFlashOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/empty"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_flash_on"
+        android:paddingBottom="@dimen/_30dp" />
+
+    <ImageView
+        android:id="@+id/ivFlashOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/empty"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_flash_off"
+        android:paddingBottom="@dimen/_30dp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30dp"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

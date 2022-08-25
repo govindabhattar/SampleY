@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/llServiceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvOrderStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_toStartOf="@+id/tvServiceTrackLink"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/tvServiceTrackLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/textViewItemTotalPrice"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/textViewItemTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvItemCustomisations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/CustomTextAppearance.Regular"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textViewItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLines="2"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/textViewItemQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/text_color_light"
+            android:textSize="@dimen/text_size_medium" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvItemChargeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textAppearance="@style/CustomTextAppearance.Light"
+        android:textColor="@color/colorLabel"
+        android:textSize="@dimen/text_size_small"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvItemStartTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/CustomTextAppearance.Regular"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvItemEndTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/CustomTextAppearance.Regular"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/questionnaireRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/viewQuestionnaireTV"
+            style="@style/CustomTextAppearance.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/questionnaireAmountTV"
+            style="@style/CustomTextAppearance.MavenMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_medium" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvsurgeAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/CustomTextAppearance.Regular"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProductTaxesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/tvProductCancelBtn"
+        style="@style/rounded_button_white_bg_style"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/rbtnReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="@string/rbtn_Text_return_flow"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/imageViewSep"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:background="@drawable/dotted"
+        android:layerType="software" />
+
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/app_top_main_layout"
+    android:animateLayoutChanges="true">
+
+    <include layout="@layout/layout_header_common" />
+
+    <RelativeLayout
+        style="@style/app_main_view_layout"
+        android:paddingTop="0dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/swScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llBottomView"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="167dp"
+                    android:layout_height="167dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:gravity="center">
+
+                    <!--<ImageView-->
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivAvtar"
+                        android:layout_width="165dp"
+                        android:layout_height="165dp"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_profile_placeholder" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarAvtar"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:visibility="gone"
+                        android:layout_centerInParent="true"
+                        android:duplicateParentState="true" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llShowCustomerRatings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:id="@+id/tvOwnerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:padding="@dimen/_5dp"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_medium15" />
+
+                <TextView
+                    android:id="@+id/tvOwnerEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:padding="@dimen/_5dp"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_medium15" />
+
+
+                <LinearLayout
+                    android:id="@+id/llRateReviewTopLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/shadow_gradient" />
+
+                    <TextView
+                        android:id="@+id/tvRatingsReviewsHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/CustomTextAppearance.SemiBold"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/shadow_gradient" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvReviewsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+
+                    <TextView
+                        android:id="@+id/tvSeeAllReviews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_grey"
+                        android:gravity="center"
+                        android:padding="20dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_normal" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/llBottomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btnChat"
+                style="@style/rectangle_button_style_full"
+                android:layout_weight="0.5"
+                android:width="0dp" />
+
+            <Button
+                android:id="@+id/btnCall"
+                style="@style/rectangle_button_style_full"
+                android:layout_weight="0.5"
+                android:width="0dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

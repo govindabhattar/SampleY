@@ -1,0 +1,401 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@color/white"
+    android:choiceMode="singleChoice"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlProfileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:clickable="true"
+        android:onClick="sideMenuClick"
+        android:paddingStart="15dp"
+        android:paddingTop="25dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="25dp">
+
+        <RelativeLayout
+            android:id="@+id/rlImageParent"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivAvtar"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                app:srcCompat="@drawable/ic_profile_img_placeholder" />
+
+            <ProgressBar
+                android:id="@+id/pbAvtar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:duplicateParentState="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/ivNextArrow"
+            android:layout_toEndOf="@+id/rlImageParent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCustomerNameSideMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/CustomTextAppearance.MavenMedium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:id="@+id/tvCustomerPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="@style/CustomTextAppearance.Regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_medium" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivNextArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:rotationY="@integer/locale_mirror_flip"
+            app:srcCompat="@drawable/ic_arrow_white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llChooseLanguage"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/llQRLayoutGuest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <com.tookancustomer.utility.CustomTextView
+                        android:id="@+id/tvDQRCodeGuest"
+                        style="@style/slider_textview"
+                        app:drawableStartCompat="@drawable/ic_qr_code_new" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameOverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llToggleView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvToggleText"
+                                style="@style/slider_textview"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.6" />
+
+                            <RadioGroup
+                                android:id="@+id/rbToggle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/_5dp"
+                                android:layout_weight="0.4"
+                                android:background="@drawable/radio_btn_bg"
+                                android:checkedButton="@+id/rbGuest"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbGuest"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/toggle_bg"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_2dp"
+                                    android:text="@string/guest"
+                                    android:textColor="@drawable/rb_text_color_selector"
+                                    android:textSize="@dimen/text_size_small" />
+
+                                <RadioButton
+                                    android:id="@+id/rbHost"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/toggle_bg"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:padding="@dimen/_2dp"
+                                    android:text="@string/host"
+                                    android:textColor="@drawable/rb_text_color_selector"
+                                    android:textSize="@dimen/text_size_small" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <com.tookancustomer.utility.CustomTextView
+                            android:id="@+id/tvCatalog"
+                            style="@style/slider_textview"
+                            android:visibility="gone"
+                            app:drawableStartCompat="@drawable/ic_catalogue" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvAllOrders"
+                                style="@style/slider_textview"
+                                app:drawableStartCompat="@drawable/ic_orders" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llWallet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvWallet"
+                                style="@style/slider_textview"
+                                app:drawableStartCompat="@drawable/ic_wallet" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llGiftCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvGiftCard"
+                                style="@style/slider_textview"
+                                app:drawableStartCompat="@drawable/ic_gift_card" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llPaymentMethodLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvPaymentMethod"
+                                style="@style/slider_textview"
+                                app:drawableStartCompat="@drawable/ic_payments" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llRewardsLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvRewards"
+                                style="@style/slider_textview"
+                                app:drawableStartCompat="@drawable/ic_reward_side_menu" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llReferalEarnLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvReferalAndEran"
+                                style="@style/slider_textview"
+                                app:drawableStartCompat="@drawable/ic_referrals" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llLoyaltyPoint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvLoyaltyPoint"
+                                style="@style/slider_textview"
+                                app:drawableStartCompat="@drawable/ic_money_bag" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvInbox"
+                                style="@style/slider_textview"
+                                app:drawableStartCompat="@drawable/ic_notification_bell" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llSubscriptionLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvSubscription"
+                                style="@style/slider_textview"
+                                app:drawableStartCompat="@drawable/ic_subscription" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llAddressLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvMyAddresses"
+                                style="@style/slider_textview"
+                                app:drawableStartCompat="@drawable/ic_icon_pin_location" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llFuguChatLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvFuguChat"
+                                style="@style/slider_textview"
+                                app:drawableStartCompat="@drawable/ic_chat" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llFuguChatCampaigns"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvFuguChatCampaigns"
+                                style="@style/slider_textview"
+                                app:drawableStartCompat="@drawable/ic_announcements" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/llQRLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvDQRCode"
+                                style="@style/slider_textview"
+                                android:text="@string/scan_qr_code"
+                                app:drawableStartCompat="@drawable/ic_qr_code_new" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llDynamicPageLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.tookancustomer.utility.CustomTextView
+                                android:id="@+id/tvDynamicPage"
+                                style="@style/slider_textview"
+                                app:drawableStartCompat="@drawable/ic_document" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/llChooseLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:onClick="sideMenuClick"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <com.tookancustomer.utility.CustomTextView
+                android:id="@+id/tvChooseLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="10dp"
+                android:textAppearance="@style/CustomTextAppearance.Regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal"
+                app:drawableEndCompat="@drawable/ic_icon_down_arrow_white" />
+
+            <Spinner
+                android:id="@+id/spinnerChooseLanguage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

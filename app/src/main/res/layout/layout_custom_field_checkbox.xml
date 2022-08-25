@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/vwTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/tvLabel"
+        style="@style/CustomTextAppearance.Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#707070"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginBottom="@dimen/_5dp"
+        android:textSize="@dimen/text_size_normal"
+        tools:text="Label" />
+
+    <RelativeLayout
+        android:id="@+id/rlParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_2dp"
+        android:paddingBottom="@dimen/_2dp">
+
+        <TextView
+            android:id="@+id/tvPlaceHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/vCustomFieldIcon"
+            android:paddingEnd="25dp"
+            android:textAppearance="@style/CustomTextAppearance.Light"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/text_size_normal"
+            tools:text="Check" />
+
+        <ImageView
+            android:id="@+id/vCustomFieldIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp" />
+
+        <ImageView
+            android:id="@+id/vCustomFieldIconEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp" />
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/spnCustomFieldValues"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:backgroundTint="@color/app_main_bg_color"
+        android:textColor="@color/black_80"
+        android:textDirection="locale"
+        android:spinnerMode="dialog"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCheckList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/vwBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:background="@color/white"
+        android:visibility="gone" />
+    <View
+        android:id="@+id/vwDeliveryDetailsEmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:background="@color/seperator_color" />
+
+</LinearLayout>

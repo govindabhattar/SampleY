@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/_20dp">
+
+
+        <TextView
+            android:id="@+id/tvHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30dp"
+            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+            android:textSize="@dimen/text_size_xx_large"
+            tools:text="Rate your Order" />
+
+
+        <com.tookancustomer.utility.CustomRatingBar
+            android:id="@+id/rbRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layoutDirection="ltr"
+            android:layout_marginTop="@dimen/_20dp"
+            android:numStars="5"
+            android:rating="1"
+            android:tag="mwar"
+            app:halfStars="false"
+            app:maxStars="5"
+            app:onlyForDisplay="false"
+            app:stars="5" />
+
+
+        <!--<com.tookancustomer.plugin.MaterialEditText-->
+        <!--android:id="@+id/etReviews"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:background="@drawable/button_dialog_cornered_bottom"-->
+        <!--android:gravity="start|top"-->
+        <!--android:imeOptions="actionDone"-->
+        <!--android:inputType="textNoSuggestions|textCapSentences|textMultiLine"-->
+        <!--android:maxLength="250"-->
+        <!--android:maxLines="6"-->
+        <!--android:minHeight="@dimen/_100dp"-->
+        <!--android:padding="10dp"-->
+        <!--android:textAppearance="@style/CustomTextAppearance.Regular"-->
+        <!--android:textCursorDrawable="@drawable/custom_edittext_cursor"-->
+        <!--android:textSize="@dimen/text_size_normal"-->
+        <!--app:met_hideUnderline="true" />-->
+
+        <EditText
+            android:id="@+id/etReviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/boundary_grey"
+            android:gravity="start"
+            android:imeOptions="actionDone"
+            android:inputType="textNoSuggestions|textCapSentences|textMultiLine"
+            android:maxLength="250"
+            android:minHeight="@dimen/_100dp"
+            android:padding="10dp"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textCursorDrawable="@drawable/custom_edittext_cursor"
+            android:textSize="@dimen/text_size_normal" />
+
+
+        <Button
+            android:id="@+id/btnSubmitRate"
+            style="@style/rectangle_button_style_full"
+            android:layout_marginTop="@dimen/_20dp" />
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llPromoCodeView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlOtherLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/_10dp"
+        android:paddingStart="@dimen/_10dp">
+
+        <ImageView
+            android:id="@+id/ivOtherIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_other_address_copy" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/ivOtherIcon"
+            android:layout_toStartOf="@+id/ibOtherOptions"
+            android:background="@drawable/ripple_normal_zero_corner"
+            android:orientation="vertical"
+            android:padding="@dimen/_10dp">
+
+            <TextView
+                android:id="@+id/tvOtherLocationType"
+                style="@style/CustomTextAppearance.Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="@dimen/_10dp"
+                android:inputType="textCapSentences"
+                android:singleLine="true"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/tvOtherAddress"
+                style="@style/CustomTextAppearance.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ibOtherOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ripple_normal_zero_corner"
+            android:padding="@dimen/_10dp"
+            app:srcCompat="@drawable/ic_address_options" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:layout_margin="@dimen/_10dp"
+        android:background="@color/seperator_color" />
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="float" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_circleRadius" format="dimension" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="BlurLayout">
+        <attr name="blk_downscaleFactor" format="float" />
+        <attr name="blk_blurRadius" format="integer" />
+        <attr name="blk_fps" format="integer" />
+        <attr name="blk_cornerRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="DateRangeCalendarView">
+        <attr name="title_color" format="color"/>
+        <attr name="week_color" format="color"/>
+        <attr name="range_color" format="color"/>
+        <attr name="selected_date_circle_color" format="color"/>
+        <attr name="selected_date_color" format="color"/>
+        <attr name="default_date_color" format="color"/>
+        <attr name="range_date_color" format="color"/>
+        <attr name="disable_date_color" format="color"/>
+        <attr name="enable_time_selection" format="boolean"/>
+        <attr name="text_size_title" format="dimension"/>
+        <attr name="text_size_week" format="dimension"/>
+        <attr name="text_size_date" format="dimension"/>
+        <attr name="header_bg" format="integer"/>
+    </declare-styleable>
+
+
+    <!-- Common attributes -->
+    <attr name="corner_radius" format="float" />
+    <attr name="min_value" format="float" />
+    <attr name="max_value" format="float" />
+    <attr name="min_start_value" format="float" />
+    <attr name="max_start_value" format="float" />
+    <attr name="steps" format="float" />
+    <attr name="gap" format="float" />
+    <attr name="fix_gap" format="float" />
+    <attr name="bar_color_mode" format="enum">
+        <enum name="solid" value="0" />
+        <enum name="gradient" value="1" />
+    </attr>
+    <attr name="bar_color" format="color" />
+    <attr name="bar_gradient_start" format="color" />
+    <attr name="bar_gradient_end" format="color" />
+    <attr name="bar_highlight_color_mode" format="enum">
+        <enum name="solid" value="0" />
+        <enum name="gradient" value="1" />
+    </attr>
+    <attr name="bar_highlight_color" format="color" />
+    <attr name="bar_highlight_gradient_start" format="color" />
+    <attr name="bar_highlight_gradient_end" format="color" />
+    <attr name="thumb_diameter" format="dimension"/>
+    <attr name="position" format="enum">
+        <enum name="left" value="0" />
+        <enum name="right" value="1" />
+    </attr>
+    <attr name="data_type" format="enum">
+        <enum name="_long" value="0" />
+        <enum name="_double" value="1" />
+        <enum name="_integer" value="2" />
+        <enum name="_float" value="3" />
+        <enum name="_short" value="4" />
+        <enum name="_byte" value="5" />
+    </attr>
+    <attr name="bar_height" format="dimension"/>
+    <attr name="seek_bar_touch_enabled" format="boolean" />
+
+    <!-- Seekbar -->
+    <declare-styleable name="CrystalSeekbar" >
+        <attr name="corner_radius" />
+        <attr name="min_value" />
+        <attr name="max_value" />
+        <attr name="min_start_value" />
+        <attr name="max_start_value" />
+        <attr name="steps" />
+        <attr name="gap" />
+        <attr name="fix_gap" />
+        <attr name="bar_height" />
+        <attr name="bar_color_mode" />
+        <attr name="bar_color" />
+        <attr name="bar_gradient_start" />
+        <attr name="bar_gradient_end" />
+        <attr name="bar_highlight_color_mode" />
+        <attr name="bar_highlight_color" />
+        <attr name="bar_highlight_gradient_start" />
+        <attr name="bar_highlight_gradient_end" />
+        <attr name="thumb_diameter" />
+        <attr name="position" />
+        <attr name="data_type" />
+        <attr name="thumb_color" format="color" />
+        <attr name="thumb_color_pressed" format="color" />
+        <attr name="thumb_image" format="reference" />
+        <attr name="thumb_image_pressed" format="reference" />
+        <attr name="seek_bar_touch_enabled" />
+    </declare-styleable>
+
+    <!-- Range Seekbar -->
+    <declare-styleable name="CrystalRangeSeekbar" >
+        <attr name="corner_radius" />
+        <attr name="min_value" />
+        <attr name="max_value" />
+        <attr name="min_start_value" />
+        <attr name="max_start_value" />
+        <attr name="steps" />
+        <attr name="gap" />
+        <attr name="fix_gap" />
+        <attr name="bar_height"/>
+        <attr name="bar_color_mode" />
+        <attr name="bar_color" />
+        <attr name="bar_gradient_start" />
+        <attr name="bar_gradient_end" />
+        <attr name="bar_highlight_color_mode" />
+        <attr name="bar_highlight_color" />
+        <attr name="bar_highlight_gradient_start" />
+        <attr name="bar_highlight_gradient_end" />
+        <attr name="thumb_diameter" />
+        <attr name="position" />
+        <attr name="data_type" />
+        <attr name="left_thumb_color" format="color" />
+        <attr name="left_thumb_color_pressed" format="color" />
+        <attr name="left_thumb_image" format="reference" />
+        <attr name="left_thumb_image_pressed" format="reference" />
+        <attr name="right_thumb_color" format="color" />
+        <attr name="right_thumb_color_pressed" format="color" />
+        <attr name="right_thumb_image" format="reference" />
+        <attr name="right_thumb_image_pressed" format="reference" />
+        <attr name="seek_bar_touch_enabled" />
+    </declare-styleable>
+
+    <declare-styleable name="CalendarPickerView">
+        <attr name="android:background"/>
+        <attr name="tsquare_dividerColor" format="color"/>
+        <attr name="tsquare_dayBackground" format="reference"/>
+        <attr name="tsquare_dayTextColor" format="color"/>
+        <attr name="tsquare_titleTextColor" format="color"/>
+        <attr name="tsquare_displayHeader" format="boolean"/>
+        <attr name="tsquare_headerTextColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="calendar_cell">
+        <attr name="tsquare_state_selectable" format="boolean" />
+        <attr name="tsquare_state_current_month" format="boolean" />
+        <attr name="tsquare_state_today" format="boolean" />
+        <attr name="tsquare_state_range_first" format="boolean" />
+        <attr name="tsquare_state_range_middle" format="boolean" />
+        <attr name="tsquare_state_range_last" format="boolean" />
+        <attr name="tsquare_state_highlighted" format="boolean" />
+        <attr name="tsquare_state_unavailable" format="boolean" />
+        <attr name="tsquare_state_deactivated" format="boolean" />
+    </declare-styleable>
+
+
+</resources>

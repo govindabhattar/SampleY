@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/app_top_main_layout">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:splitMotionEvents="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_header_common" />
+
+            <LinearLayout style="@style/app_main_view_layout">
+
+                <com.tookancustomer.utility.CustomTextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@color/lighter_grey"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:padding="7dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/text_color"
+                    app:drawableStartCompat="@drawable/ic_other_address_copy" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCategoriesList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:id="@+id/llNoCategoriesAvailable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvNoCategoryFound"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:gravity="center"
+                            android:textAppearance="@style/CustomTextAppearance.Regular"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_medium" />
+
+                        <Button
+                            android:id="@+id/btnGoToLocationActivity"
+                            style="@style/rounded_button_style"
+                            android:layout_margin="28dp"
+                            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+                            android:textColor="@color/btn_text_color"
+                            android:textSize="@dimen/text_size_large"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- The navigation drawer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginStart="25dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/slider_menu" />
+
+        </LinearLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

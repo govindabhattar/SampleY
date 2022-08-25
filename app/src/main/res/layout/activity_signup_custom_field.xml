@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_selector_transparent_grey"
+            android:padding="16dp"
+            android:layout_marginBottom="-20dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:rotationY="@integer/locale_mirror_flip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_back"
+                android:clickable="false"
+                android:duplicateParentState="true" />
+        </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/rlBack"
+        android:id="@+id/swScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBelow"
+        android:animateLayoutChanges="true"
+        android:fadeScrollbars="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:paddingBottom="0dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp">
+
+            <ImageView
+                android:id="@+id/ivSad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                app:srcCompat="@drawable/ic_sad_face"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvHeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textAppearance="@style/CustomTextAppearance.Light"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_xl" />
+
+            <TextView
+                android:id="@+id/tvRequiredCustomField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHeaderText"
+                android:layout_marginTop="@dimen/_15dp"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="4.5sp"
+                android:textAppearance="@style/CustomTextAppearance.Light"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCustomFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvRequiredCustomField"
+                android:layout_marginTop="@dimen/_10dp" />
+
+            <!--Custom Field starts here-->
+            <LinearLayout
+                android:id="@+id/llCustomFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvRequiredCustomField"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:orientation="vertical"
+                android:showDividers="none"
+                android:visibility="gone">
+
+            </LinearLayout>
+            <!--CustomField ends here-->
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llUserInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llBelow"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/CustomTextAppearance.Medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvActivateMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:gravity="center"
+            android:padding="@dimen/_5dp"
+            android:textAppearance="@style/CustomTextAppearance.Light"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBelow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@drawable/shadow_gradient_up" />
+
+        <Button
+            android:id="@+id/btnContinue"
+            style="@style/rectangle_button_style" />
+
+        <TextView
+            android:id="@+id/tvLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:textAppearance="@style/CustomTextAppearance.Light"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+</RelativeLayout>

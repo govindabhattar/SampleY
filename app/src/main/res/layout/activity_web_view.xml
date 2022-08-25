@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_top_main_layout">
+
+    <include layout="@layout/layout_header_common" />
+
+
+    <LinearLayout style="@style/app_main_view_layout"
+        android:fitsSystemWindows="true">
+
+        <WebView
+            android:id="@+id/wvWebsite"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

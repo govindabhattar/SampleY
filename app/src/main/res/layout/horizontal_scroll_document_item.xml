@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/app_main_bg_color"
+    android:paddingEnd="8dp">
+
+    <ImageView
+        android:id="@+id/imgSnapshot"
+        android:layout_width="70dp"
+        android:layout_height="75dp"
+        android:padding="@dimen/_8dp"
+        android:layout_centerVertical="true"/>
+
+    <ProgressBar
+        android:id="@+id/pbProgressBar"
+        android:visibility="gone"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:id="@+id/ivDeleteItem"
+        android:layout_width="@dimen/_20dp"
+        android:layout_height="@dimen/_20dp"
+        android:padding="@dimen/_5dp"
+        android:background="@drawable/ic_failure"
+        android:layout_alignEnd="@+id/imgSnapshot"/>
+
+</RelativeLayout>
+

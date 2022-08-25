@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingEnd="15dp"
+    android:paddingStart="15dp"
+    android:paddingTop="15dp">
+
+    <TextView
+        android:id="@+id/tvLongDescriptionLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingEnd="20dp"
+        android:textAlignment="viewStart"
+        android:textAllCaps="true"
+        android:textAppearance="@style/CustomTextAppearance.SemiBold"
+        android:textColor="@color/primary_text_color_60"
+        android:textSize="@dimen/text_size_small"
+        tools:text="dsakhjdhasjdhsaasdkjsdkajdksajdksjadkkdsajdka" />
+
+    <TextView
+        android:id="@+id/tvLongDescription"
+        android:layout_marginTop="@dimen/_5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="20dp"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textAppearance="@style/CustomTextAppearance.Regular"
+        android:textColor="@color/primary_text_color_60"
+        android:textSize="@dimen/text_size_small"
+        tools:text="dsakhjdhasjdhsaasdkjsdkajdksajdksjadkkdsajdka" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorDividerLine" />
+
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_selector_transparent_grey"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:duplicateParentState="true"
+            android:rotationY="@integer/locale_mirror_flip"
+            app:srcCompat="@drawable/ic_back" />
+    </RelativeLayout>
+
+    <params.com.stepview.StatusViewScroller
+        android:id="@+id/statusViewScroller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:circleColor="@color/white"
+        app:circleColorCurrent="@color/white"
+        app:circleColorIncomplete="@color/white"
+        app:circleRadius="13dp"
+        app:circleColorType="fillStroke"
+        app:circleStrokeColorCurrent="@color/medium_grey"
+        app:circleStrokeWidth="4dp"
+        app:completeDrawable="@drawable/oval_tick"
+        app:currentCount="1"
+        app:currentDrawable="@drawable/oval_ongoing"
+        app:drawLabels="true"
+        app:incompleteDrawable="@drawable/white_oval"
+        app:lineColor="@color/black"
+        app:lineColorCurrent="@color/medium_grey"
+        app:lineColorIncomplete="@color/medium_grey"
+        app:lineGap="0dp"
+        app:lineWidth="5dp"
+        app:stepCount="3"
+        android:layout_marginTop="20dp"
+        app:textColorLabels="@android:color/white"
+        app:textColorLabelsCurrent="@android:color/white"
+        app:textColorLabelsIncomplete="@android:color/black"
+        app:textSizeLabels="15sp" />
+
+
+    <com.tookancustomer.customviews.NonSwipeableViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"   />
+
+</LinearLayout>

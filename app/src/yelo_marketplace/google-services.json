@@ -1,0 +1,137 @@
+{
+  "project_info": {
+    "project_number": "709068903896",
+    "firebase_url": "https://yelo-marketplace.firebaseio.com",
+    "project_id": "yelo-marketplace",
+    "storage_bucket": "yelo-marketplace.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709068903896:android:d9b60e1fb1daae31",
+        "android_client_info": {
+          "package_name": "com.clicklabs.yelo_marketplace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709068903896-alvmbln3sk59qajc511v0otkkqvc40gt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.clicklabs.yelo_marketplace",
+            "certificate_hash": "52b2598e31e8adae6ba6edb248f3d9ec8c8894c6"
+          }
+        },
+        {
+          "client_id": "709068903896-1qi553lr8ikeqkp2d750mf9km7o8m3eh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.clicklabs.yelo_marketplace",
+            "certificate_hash": "45d1489fa13cf7841bc80dea77131c150bc21733"
+          }
+        },
+        {
+          "client_id": "709068903896-4pkv5240r2bij622fil9othl0t8jk4j8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqKbVhTs4Y602u0pHqk280IrgmL5RN2XA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709068903896-918siflb21c56ss0iae8rae43i3tg8gh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "709068903896-htt7adtlkedn1d833fmnabu4b52kpc3e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.yelo.marketplace"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709068903896:android:b2f9ed809a264b7c",
+        "android_client_info": {
+          "package_name": "com.jungleworks.yelo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709068903896-ejqdhq0f7qoa48fuk6vrqg9lbg6jqieq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jungleworks.yelo",
+            "certificate_hash": "45d1489fa13cf7841bc80dea77131c150bc21733"
+          }
+        },
+        {
+          "client_id": "709068903896-16sjl0jn4mj6tkvqgrd98d936ce54jt9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jungleworks.yelo",
+            "certificate_hash": "52b2598e31e8adae6ba6edb248f3d9ec8c8894c6"
+          }
+        },
+        {
+          "client_id": "709068903896-4nlhv0n7t28p23q15q733me5087bqnov.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jungleworks.yelo",
+            "certificate_hash": "2ecc588bdc312c899e61e2dc72ff83a466a2b245"
+          }
+        },
+        {
+          "client_id": "709068903896-4pkv5240r2bij622fil9othl0t8jk4j8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqKbVhTs4Y602u0pHqk280IrgmL5RN2XA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709068903896-918siflb21c56ss0iae8rae43i3tg8gh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "709068903896-htt7adtlkedn1d833fmnabu4b52kpc3e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.yelo.marketplace"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

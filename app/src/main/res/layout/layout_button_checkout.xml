@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvMinOrderAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nine_grey"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textAppearance="@style/CustomTextAppearance.Regular"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlTotalQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tvMinOrderAmount"
+        android:background="@drawable/app_button_background_rect"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvTotalQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:layout_toStartOf="@+id/tvSubTotal"
+            android:letterSpacing="0.01"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/btn_text_color"
+            android:textSize="@dimen/text_size_normal" />
+
+        <com.tookancustomer.utility.CustomTextView
+            android:id="@+id/tvSubTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_transparent_20"
+            android:drawablePadding="3dp"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="8dp"
+            android:textAppearance="@style/CustomTextAppearance.MavenMedium"
+            android:textColor="@color/btn_text_color"
+            android:textSize="@dimen/text_size_medium"
+            app:drawableEndCompat="@drawable/ic_forward_arrow_white_small" />
+
+    </RelativeLayout>
+</RelativeLayout>

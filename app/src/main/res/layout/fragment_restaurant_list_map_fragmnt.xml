@@ -1,0 +1,317 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/ic_icon_pin_location" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <ImageView
+                android:id="@+id/rllist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:layout_marginEnd="@dimen/_15dp"
+                android:layout_marginBottom="@dimen/_50dp"
+                android:background="@drawable/white_circle"
+                android:elevation="@dimen/_10dp"
+                app:srcCompat="@drawable/ic_list_view" />
+
+
+
+            <ImageView
+                android:id="@+id/locationIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_15dp"
+                android:layout_marginBottom="@dimen/_50dp"
+                android:background="@drawable/white_circle"
+                android:elevation="@dimen/_10dp"
+                app:srcCompat="@drawable/ic_current_location" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/merchantDetailRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="@dimen/_30dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10dp"
+            android:visibility="gone">
+
+            <include layout="@layout/item_view_restaurant_map" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_100dp"
+        android:layout_marginEnd="@dimen/_15dp"
+        android:layout_marginBottom="300dp"
+        android:gravity="end"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/businessCategoryLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_round_corners_white"
+            android:orientation="vertical"
+            android:padding="@dimen/_5dp">
+
+            <com.tookancustomer.utility.CustomTextView
+                android:id="@+id/selectedCategoryTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:drawableEndCompat="@drawable/ic_down_arrow"
+                android:drawablePadding="@dimen/_25dp"
+                android:padding="@dimen/_5dp"
+                android:textColor="@color/colorPrimary" />
+
+            <View
+                android:id="@+id/seperaterView"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/grey_bg"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAdminCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5dp"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llSelfPickupDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/deliveryTypeLL"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/white_circle"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/deliveryTypeIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_home_delivery_active" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pickupDeliveryLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:background="@drawable/background_round_corners_white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+               <!-- <com.tookancustomer.utility.CustomTextView
+                    android:id="@+id/tvHomeDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:padding="10dp"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    app:drawableStartCompat="@drawable/ic_home_delivery_active" />
+
+                <com.tookancustomer.utility.CustomTextView
+                    android:id="@+id/tvSelfPickup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:padding="10dp"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    app:drawableStartCompat="@drawable/ic_pickup_active" />
+
+                <com.tookancustomer.utility.CustomTextView
+                    android:id="@+id/tvPuckupAndDrop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:padding="10dp"
+                    android:textAppearance="@style/CustomTextAppearance.Regular"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_size_small"
+                    app:drawableStartCompat="@drawable/ic_home_delivery_active" />-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivHomedelivery"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center_vertical"/>
+
+                    <com.tookancustomer.utility.CustomTextView
+                        android:id="@+id/tvHomeDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:paddingLeft="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="Home Delivery"
+                        android:textAppearance="@style/CustomTextAppearance.Regular"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_size_medium13" />
+                </LinearLayout>
+
+
+                <!-- <com.tookancustomer.utility.CustomTextView
+                     android:id="@+id/tvHomeDelivery"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:drawablePadding="5dp"
+                     android:ellipsize="end"
+                     android:gravity="center"
+                     android:maxLines="2"
+                     android:padding="10dp"
+                     android:textAppearance="@style/CustomTextAppearance.Regular"
+                     android:textColor="@color/primary_text_color"
+                     android:textSize="@dimen/text_size_small"
+                     app:drawableStartCompat="@drawable/ic_home_delivery_active" />
+ -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivSelfPickup"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center_vertical"/>
+
+                    <com.tookancustomer.utility.CustomTextView
+                        android:id="@+id/tvSelfPickup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:paddingLeft="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="Take Away"
+                        android:textAppearance="@style/CustomTextAppearance.Regular"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_size_medium13"/>
+
+                </LinearLayout>
+
+
+                <!-- <com.tookancustomer.utility.CustomTextView
+                     android:id="@+id/tvSelfPickup"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:drawablePadding="5dp"
+                     android:ellipsize="end"
+                     android:gravity="center"
+                     android:maxLines="2"
+                     android:padding="10dp"
+                     android:textAppearance="@style/CustomTextAppearance.Regular"
+                     android:textColor="@color/primary_text_color"
+                     android:textSize="@dimen/text_size_small"
+                     app:drawableStartCompat="@drawable/ic_pickup_active" />-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivPickAndDrop"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center_vertical"/>
+
+                    <com.tookancustomer.utility.CustomTextView
+                        android:id="@+id/tvPuckupAndDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:paddingLeft="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="Pick And Drop"
+                        android:textAppearance="@style/CustomTextAppearance.Regular"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_size_medium13"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

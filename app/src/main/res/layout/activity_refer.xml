@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/app_top_main_layout">
+
+    <include layout="@layout/layout_header_common" />
+
+    <RelativeLayout style="@style/app_main_view_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llShareButtons"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/padding_right_left"
+            android:paddingStart="@dimen/padding_right_left"
+            android:paddingTop="@dimen/padding_right_left"
+            android:weightSum="6">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/refer_image_width"
+                    android:layout_height="@dimen/refer_image_height"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_15dp"
+                    android:layout_marginTop="@dimen/refer_image_margin_top"
+                    android:layout_weight="1"
+                    android:background="@drawable/refer_icon" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvReferMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:layout_marginEnd="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/colorReferText"
+                android:textSize="@dimen/text_size_medium15" />
+
+            <TextView
+                android:id="@+id/tvHowItWorks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15dp"
+                android:layout_weight="1"
+                android:textColor="@color/colorReferHowItWorksText"
+                android:textSize="@dimen/text_size_small"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvReferalCode"
+                    android:layout_width="290dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/refer_code_margin_bottom"
+                    android:layout_marginBottom="@dimen/refer_code_margin_bottom"
+                    android:layout_weight="1"
+                    android:background="@drawable/dotted_rectangle"
+                    android:gravity="center"
+                    android:letterSpacing="0.02"
+                    android:padding="@dimen/_10dp"
+                    android:textColor="@color/colorReferCode"
+                    android:textSize="@dimen/text_size_large" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvTapBoxMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/refer_code_margin_bottom"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:letterSpacing="0.03"
+                android:textColor="@color/heading_text_color_onboard"
+                android:textSize="@dimen/text_size_medium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llShareButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvShareOn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/refer_code_margin_bottom"
+                android:gravity="center"
+                android:letterSpacing="0.03"
+                android:textColor="@color/colorShareon"
+                android:textSize="@dimen/text_size_medium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/ibFacebook"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/background_round_corners_facebook"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    app:srcCompat="@drawable/ic_icon_fb" />
+
+                <ImageButton
+                    android:id="@+id/ibTwitter"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/background_round_corners_twitter"
+                    app:srcCompat="@drawable/ic_twitter_logo" />
+
+                <ImageButton
+                    android:id="@+id/ibWhatsapp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/background_round_corners_whatsapp"
+                    app:srcCompat="@drawable/ic_1494267028_whatsapp" />
+
+                <ImageButton
+                    android:id="@+id/ibMore"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/background_round_corners_more"
+                    app:srcCompat="@drawable/ic_more" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/_10dp">
+
+    <RadioButton
+        android:id="@+id/rbtnSeller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvSellerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_weight="0.6"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_medium15"
+            tools:text="Select the Seller" />
+
+        <TextView
+            android:id="@+id/tvSellerPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_weight="0.4"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAlignment="textEnd"
+            android:textAppearance="@style/CustomTextAppearance.SemiBold"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/text_size_medium15"
+            tools:text="123" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

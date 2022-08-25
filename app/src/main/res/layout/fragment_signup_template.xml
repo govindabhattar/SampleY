@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/svScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnContinue"
+        android:animateLayoutChanges="true"
+        android:fadeScrollbars="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp">
+
+            <TextView
+                android:id="@+id/tvHeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textAppearance="@style/CustomTextAppearance.Light"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_size_large" />
+
+            <LinearLayout
+                android:id="@+id/llCustomFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:orientation="vertical"
+                android:showDividers="none" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnContinue"
+        style="@style/rectangle_button_style"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

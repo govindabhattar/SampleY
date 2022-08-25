@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:splitMotionEvents="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_selector_transparent_grey"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:rotationY="@integer/locale_mirror_flip"
+                app:srcCompat="@drawable/ic_back" />
+        </RelativeLayout>
+        <!--android:layout_toEndOf="@+id/rlBack"-->
+        <!--android:layout_toStartOf="@+id/rlHeaderTextOption"-->
+        <!--android:layout_toEndOf="@+id/rlBack"-->
+        <!--android:layout_toStartOf="@+id/rlHeaderTextOption"-->
+        <TextView
+            android:id="@+id/tvHeading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/rlBack"
+            android:layout_toStartOf="@+id/rlHeaderTextOption"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textAppearance="@style/CustomTextAppearance.Avenir"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/header_text_size" />
+
+        <ImageView
+            android:id="@+id/ivMap"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/_10dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:srcCompat="@drawable/ic_icon_pin_location" />
+
+        <RelativeLayout
+            android:id="@+id/rlHeaderTextOption"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_selector_transparent_grey"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvHeaderOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:padding="@dimen/_5dp"
+                android:textAppearance="@style/CustomTextAppearance.SemiBold"
+                android:textColor="@drawable/text_selector_accent_textview"
+                android:textSize="@dimen/text_size_medium15" />
+
+            <ImageView
+                android:id="@+id/ivHeaderImageOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:visibility="gone"
+                tools:visibility="visible"
+                app:srcCompat="@drawable/ic_cancel_primary" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/vwShadow"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorDividerLine" />
+
+</LinearLayout>

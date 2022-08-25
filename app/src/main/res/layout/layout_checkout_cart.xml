@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="3dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlCartHeader"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/ripple_normal"
+            android:padding="@dimen/_10dp">
+
+            <com.tookancustomer.utility.CustomTextView
+                android:id="@+id/tvCartHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textAllCaps="true"
+                android:textAppearance="@style/CustomTextAppearance.Regular"
+                android:textColor="@color/colorReferCode"
+                android:textSize="@dimen/text_size_medium" />
+
+            <ImageView
+                android:id="@+id/ibArrow"
+                android:layout_width="12dp"
+                android:layout_height="8dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5dp"
+                android:layout_toEndOf="@+id/tvCartHeader"
+                android:gravity="center"
+                android:rotation="180"
+                app:srcCompat="@drawable/drop_down_arrow" />
+
+            <TextView
+                android:id="@+id/tvCartAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_selector_transparent_grey"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textAppearance="@style/CustomTextAppearance.SemiBold"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_medium"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llCartChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/seperator_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/rlSubtotalPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp">
+
+                    <LinearLayout
+                        android:id="@+id/llSubTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvSubtotalHeading"
+                            style="@style/CustomTextAppearance.Regular"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_normal"
+                            tools:text="SubTotal" />
+
+                        <TextView
+                            android:id="@+id/tvSubTotal"
+                            style="@style/CustomTextAppearance.SemiBold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/text_size_normal"
+                            tools:text="$200" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvFreeDeliveryHeader"
+                        style="@style/CustomTextAppearance.Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llSubTotal"
+                        tools:text="(Free Delivery, if order value is more than $ 200)" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvCancellationPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:visibility="gone"
+                    tools:text="@string/cancellation_policy" />
+
+                <RelativeLayout
+                    android:id="@+id/rlAdditionalPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvAdditionalHeading"
+                        style="@style/CustomTextAppearance.Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_size_normal" />
+
+
+                    <TextView
+                        android:id="@+id/tvAdditionalAmount"
+                        style="@style/CustomTextAppearance.SemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:gravity="end"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_size_normal" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlTotallPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvTotalHeading"
+                        style="@style/CustomTextAppearance.Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <TextView
+                        android:id="@+id/tvTotalAmount"
+                        style="@style/CustomTextAppearance.SemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:gravity="end"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_size_normal" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

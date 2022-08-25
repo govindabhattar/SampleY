@@ -1,0 +1,5 @@
+<RadioButton
+    android:id="@+id/rbSubscriptionDay"
+    style="@style/SubscribeRadioButton"
+    android:text="@string/thursday"
+    xmlns:android="http://schemas.android.com/apk/res/android"/>

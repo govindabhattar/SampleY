@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tookancustomer.LongDescriptionActivity">
+
+    <include layout="@layout/layout_header_common" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvLongDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_20dp"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/primary_text_color_60"
+            tools:text="sadsadsadsadasdasdd"
+            android:textSize="@dimen/text_size_small" />
+
+
+    </ScrollView>
+
+
+</LinearLayout>

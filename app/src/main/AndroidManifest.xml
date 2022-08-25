@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tookancustomer">
+    <!-- Permission for google analytics -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Permissions to use CAMERA -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Permissions to use CAMERA with AUTO-FOCUS -->
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:exported="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:supportsRtl,android:name,android:allowBackup">
+
+        <activity android:name=".modules.customerSubscription.CustomerSubscriptionActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+
+        <activity android:name=".GuestLoginActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+
+        <activity
+            android:name=".LoginOTPActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login_otp"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- <activity android:name=".loginOTPScreen" /> -->
+        <activity
+            android:name=".agentListing.AgentListingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".agentListing.AgentListingCheckoutActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity android:name=".TaskDetailsNewActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity android:name=".ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider.${applicationId}"
+            android:exported="true" /> <!-- Add your API key here -->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_ppCoFdtiFW3Sky" />
+
+        <activity
+            android:name=".LinkDispatcherActivity"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoDisplay"
+            android:exported="true">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "ffetch://products” -->
+                <data
+                    android:host="${deepLinkHost}"
+                    android:pathPrefix="/en/store"
+                    android:scheme="${deepLinkScheme}" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.example.com/gizmos/5a4d7a0435babe756a04bd2e” -->
+                <data
+                    android:host="testmerchant123-freelancer.taxi-hawk.com"
+                    android:scheme="https" />
+                <!-- note that the leading "/" is required for pathPrefix -->
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="com.facebook.sdk.CodelessDebugLogEnabled"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- <activity android:name="." /> -->
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key1" />
+
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+
+        <service
+            android:name=".fcm.FCMMessagingService"
+            android:stopWithTask="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+     Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_notif" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+ <activity
+             android:name=".LinkDispatcherActivity"
+             android:launchMode="singleInstance"
+             android:noHistory="true"
+             android:theme="@android:style/Theme.NoDisplay" />
+        -->
+        <activity
+            android:name=".SignInActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".WishListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".OTPActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".MakePaymentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".TasksActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".TaskDetailsActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PaymentMethodActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".ViewCardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".ReferActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FavLocationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.VIEW" /> -->
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.media.cluster.cluster"
+                    android:scheme="com.media.cluster.cluster" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WebViewPaymentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.VIEW" /> -->
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.media.cluster.cluster"
+                    android:scheme="com.media.cluster.cluster" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WebViewActivityRazorPay"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.VIEW" /> -->
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.media.cluster.cluster"
+                    android:scheme="com.media.cluster.cluster" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WebViewActivityInstaPay"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.VIEW" /> -->
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.media.cluster.cluster"
+                    android:scheme="com.media.cluster.cluster" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WebViewActivityPayfast"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.VIEW" /> -->
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.media.cluster.cluster"
+                    android:scheme="com.media.cluster.cluster" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WebViewActivityPayuLatum"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.VIEW" /> -->
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.media.cluster.cluster"
+                    android:scheme="com.media.cluster.cluster" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WebViewActivityFACPay"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.VIEW" /> -->
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.media.cluster.cluster"
+                    android:scheme="com.media.cluster.cluster" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WebViewPayfortActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.VIEW" /> -->
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.media.cluster.cluster"
+                    android:scheme="com.media.cluster.cluster" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WebViewTrackingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.VIEW" /> -->
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.media.cluster.cluster"
+                    android:scheme="com.media.cluster.cluster" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NLevelWorkFlowActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddFromMapActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".MapActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".ShowProductOnMapActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".CheckOutActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".ConfirmAddressActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".SignupCustomFieldsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".ProductCustomisationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".RestaurantListingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".ScheduleTimeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".SearchProductActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".MerchantAddRateReviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".utility.SimpleScannerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".ProductDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".ProductDetailPDPView2Activity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".DatesOnCalendarActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".MerchantReviewsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".FiltersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".RentalHomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".HostHomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".OwnerProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".MarketplaceSearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".AdminCategoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".LongDescriptionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".CatalogueActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".CompleteRequestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".AddProductActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".ListingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".SelectStaticAddressActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".RegistrationOnboardingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".DynamicPagesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".filter.FilterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".checkoutTemplate.CheckoutTemplateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".agentListing.AgentDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".questionnaireTemplate.QuestionnaireTemplateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".mapfiles.placeapi.PlaceSearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".LoyalityPointsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".RewardConditionsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".CheckOutCustomActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".cancellationPolicy.ViewCancellationPolicyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".HyperlocalLandingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".WalletAddMoneyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".WalletDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".GiftCardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".BuyGiftCardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".RedeemGiftCardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".GiftCardPaymentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".modules.merchantCatalog.activities.MerchantCatalogActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".rating.activity.RatingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".modules.payment.activities.AddCardWebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".modules.payment.activities.ProcessingPaymentWebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".modules.reward.activity.RewardsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".modules.reward.activity.PlanDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".UserDebtActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".modules.recurring.SubscriptionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".modules.recurring.SubscriptionSlotsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".modules.recurring.RecurringTaskDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan|stateAlwaysHidden" />
+    </application>
+
+</manifest>
